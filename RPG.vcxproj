@@ -147,6 +147,8 @@
     <ClInclude Include="Environmental_object.h" />
     <ClInclude Include="Environment.h" />
     <ClInclude Include="Global_ability.h" />
+    <ClInclude Include="Iterable.h" />
+    <ClInclude Include="Iterator.h" />
     <ClInclude Include="Primitive_object.h" />
     <ClInclude Include="Savers.h" />
     <ClInclude Include="Map.h" />
@@ -155,6 +157,7 @@
     <ClInclude Include="Proxy_world.h" />
     <ClInclude Include="Saver.h" />
     <ClInclude Include="Tester.h" />
+    <ClInclude Include="Vector_iterator.h" />
     <ClInclude Include="World.h" />
   </ItemGroup>
   <ItemGroup>
@@ -166,6 +169,8 @@
     <ClCompile Include="Environmental_object.cpp" />
     <ClCompile Include="Environment.cpp" />
     <ClCompile Include="Global_ability.cpp" />
+    <ClCompile Include="Iterable.cpp" />
+    <ClCompile Include="Iterator.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="Primitive_object.cpp" />
     <ClCompile Include="Savers.cpp" />
@@ -175,6 +180,7 @@
     <ClCompile Include="Proxy_world.cpp" />
     <ClCompile Include="Saver.cpp" />
     <ClCompile Include="Tester.cpp" />
+    <ClCompile Include="Vector_iterator.cpp" />
     <ClCompile Include="World.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
