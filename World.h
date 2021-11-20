@@ -16,5 +16,7 @@ public:
 	int change_player(Player* player);
 	std::string get_current_map_name();
 	std::string get_current_player_name();
+	Map* get_map();
+	Player* get_player();
 };
 

@@ -24,3 +24,9 @@ void Character::set_resource(int set_resource)
 {
 	resource = set_resource;
 }
+
+std::vector<Character*> Character::get_visible_characters()
+{
+	std::vector<Character*> visible_characters;
+	visible_characters.push_back(this);
+}

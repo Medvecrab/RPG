@@ -1,19 +1,19 @@
 #pragma once
 #include <string>
+#include <vector>
 #include "Character.h"
 
-class Class_ability
+class Global_ability
 {
 private:
 	float damage_formula;
 	float healing_formula;
 	std::string applied_effects;
 	std::string desc;
-	float cast_range;
 public:
-	Class_ability();
-	Class_ability(std::string, int, int);
-	virtual void cast(Character*);
-	virtual std::string get_description();
+	Global_ability(std::string, int, int);
+	void cast(std::vector<Character*>);
+	std::string get_description();
 };
+
 

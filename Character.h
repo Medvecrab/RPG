@@ -1,5 +1,6 @@
 #pragma once
 #include <string>
+#include <vector>
 
 class Character
 {
@@ -13,5 +14,6 @@ public:
 	void set_health(int);
 	int get_resource();
 	void set_resource(int);
+	std::vector<Character*> get_visible_characters();
 };
 

@@ -41,3 +41,14 @@ std::string World::get_current_player_name()
 		return current_player->get_name();
 	}
 }
+
+Map* World::get_map()
+{
+	return current_map;
+}
+
+Player* World::get_player()
+{
+	return current_player;
+}
+

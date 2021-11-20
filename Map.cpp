@@ -5,6 +5,11 @@ std::string Map::get_name()
 	return name;
 }
 
+Environment* Map::get_env()
+{
+	return this->env;
+}
+
 void Map::set_name(std::string input_name)
 {
 	this->name = input_name;
