@@ -1,6 +1,6 @@
 #include "Tester.h"
 
-void Tester::test_delegate()
+void Tester::test_delegate() //тут будет тест потом на бридже
 {
 	Player* alive_player = new Player(100);
 	Player* dead_player = new Player(0);
@@ -10,7 +10,7 @@ void Tester::test_delegate()
 	dead_player->save_character("player2.sv");
 }
 
-void Tester::test_proxy() 
+void Tester::test_proxy() //это работает
 {
 	Proxy_world* p_world = new Proxy_world();
 	Player* player = new Player("Alexei");

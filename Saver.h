@@ -1,11 +1,12 @@
 #pragma once
 #include <string>
+#include <iostream>
 
 class Saver
 {
 public:
 	Saver() {};
 	~Saver() {};
-	virtual int save_character(std::string filename) = 0;
+	virtual void save_world(std::string filename) = 0;
 };
 
