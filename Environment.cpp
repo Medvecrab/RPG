@@ -15,9 +15,12 @@ Iterator* Environment::init_iterator()
 	return new Vector_iterator(assigned_NPCs);
 }
 
-void Environment::add_env_object(Environmental_object* env_obj)
+void Environment::add_env_object(Unique_state_env_obj* env_obj)
 {
 	env_objects.push_back(env_obj);
+	std::cout << "Added ";
+	env_obj->react();
+	std::cout << std::endl;
 }
 
 void Environment::relocate_spawn_point(int x, int y, int index)

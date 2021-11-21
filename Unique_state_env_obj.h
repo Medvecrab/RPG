@@ -14,7 +14,8 @@ private:
 	std::string color;
 	Environmental_object* env_obj;
 public:
-	Unique_state_env_obj(std::string, int, std::pair<int,int>);
+	Unique_state_env_obj(std::string, int hp, int x, int y);
+	void set_env_obj(Environmental_object*);
 	void react();
 };
 

@@ -45,13 +45,13 @@ void Tester::test_decorator()
 
 void Tester::test_composite()
 {
-	Primitive_object* first = new Primitive_object();
-	Compound_object* comp = new Compound_object();
-	comp->add_env_obj(new Primitive_object());
-	comp->add_env_obj(new Primitive_object());
-	comp->add_env_obj(new Compound_object());
-	comp->add_env_obj(new Compound_object());
-	comp->add_env_obj(new Compound_object());
+	Primitive_object* first = new Primitive_object("rocky");
+	Compound_object* comp = new Compound_object("wooden");
+	comp->add_env_obj(new Primitive_object("golden"));
+	comp->add_env_obj(new Primitive_object("golden"));
+	comp->add_env_obj(new Compound_object("purse"));
+	comp->add_env_obj(new Compound_object("hole"));
+	comp->add_env_obj(new Compound_object("barrel"));
 	first->react();
 	comp->react();
 }
@@ -66,4 +66,37 @@ void Tester::test_iterator()
 	{
 		std::cout << iter->get_next()->get_name() << std::endl;
 	}
+}
+
+void Tester::test_bridge()
+{
+	Map* map = new Map();
+	map->set_bg_generator(new Voronoi_diagramm());
+	map->load_bg_image();
+	map->set_bg_generator(new Perlin_noise());
+	map->load_bg_image();
+	map->set_bg_generator(new Loader());
+	map->load_bg_image();
+}
+
+void Tester::test_flyweight()
+{
+	Primitive_object* prim = new Primitive_object("rocky");
+	Unique_state_env_obj* exact_env_obj = new Unique_state_env_obj("rock", 200, 0, 0);
+	Unique_state_env_obj* exact_env_obj_2 = new Unique_state_env_obj("boulder", 300, 50, 50);
+	exact_env_obj->set_env_obj(prim);
+	exact_env_obj_2->set_env_obj(prim);
+	Unique_state_env_obj* exact_env_obj_3 = new Unique_state_env_obj("chest", 150, 150, 150);
+	exact_env_obj_3->set_env_obj(new Compound_object("wooden"));
+	exact_env_obj->react();
+	exact_env_obj_2->react();
+	exact_env_obj_3->react();
+}
+
+void Tester::test_facade()
+{
+	Map* map = new Map("Voronezh");
+	map->set_env(new Environment());
+	map->add_env_object(new Unique_state_env_obj("statue", 150, 40, 40));
+	map->add_env_object(new Unique_state_env_obj("fountain", 50, 80, 80));
 }

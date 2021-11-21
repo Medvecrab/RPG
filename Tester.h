@@ -11,6 +11,11 @@
 #include "Compound_object.h"
 #include "Primitive_object.h"
 #include "Environment.h"
+#include "Background_generator.h"
+#include "Perlin_noise.h"
+#include "Voronoi_diagramm.h"
+#include "Loader.h"
+#include "Unique_state_env_obj.h"
 #include <iostream>
 #include <stdio.h>
 

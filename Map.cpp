@@ -27,9 +27,20 @@ Map::~Map() {}
 void Map::load_bg_image()
 {
 	bg_image = bg_generator->generate_background();
+	std::cout << "Background changed to " << bg_image << std::endl;
 }
 
 void Map::set_bg_generator(Background_generator* bg_gen)
 {
 	bg_generator = bg_gen;
+}
+
+void Map::set_env(Environment* new_env)
+{
+	env = new_env;
+}
+
+void Map::add_env_object(Unique_state_env_obj* new_obj)
+{
+	env->add_env_object(new_obj);
 }

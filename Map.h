@@ -14,6 +14,8 @@ public:
 	std::string get_name();
 	void set_name(std::string);
 	Environment* get_env();
+	void set_env(Environment*);
+	void add_env_object(Unique_state_env_obj*);
 	Map();
 	Map(std::string);
 	~Map();

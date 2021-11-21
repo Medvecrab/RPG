@@ -5,9 +5,14 @@ Compound_object::Compound_object()
 
 }
 
+Compound_object::Compound_object(std::string new_sprite)
+{
+	sprite = new_sprite;
+}
+
 void Compound_object::react()
 {
-	std::cout << "I'm compound and I store those primitives: " << std::endl;
+	std::cout << "I'm compound with sprite " << sprite << " and I store those primitives: " << std::endl;
 	for (auto prim : object_list)
 	{
 		prim->react();
