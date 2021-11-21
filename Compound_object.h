@@ -2,13 +2,13 @@
 #include "Environmental_object.h"
 #include <vector>
 
-class Compound_object : Enivironmental_object
+class Compound_object : Environmental_object
 {
 private:
-	std::vector<Enivironmental_object*> object_list;
+	std::vector<Environmental_object*> object_list;
 public:
 	void react() override;
-	void add_env_obj(Enivironmental_object*);
+	void add_env_obj(Environmental_object*);
 	void remove_env_obj(int);
 };
 

@@ -1,5 +1,10 @@
 #include "Saver_decorator.h"
 
+Saver_decorator::Saver_decorator()
+{
+
+}
+
 Saver_decorator::Saver_decorator(Saver* saver)
 {
 	wrapee = saver;

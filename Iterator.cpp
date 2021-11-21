@@ -1,5 +1,10 @@
 #include "Iterator.h"
 
+Iterator::Iterator()
+{
+
+}
+
 bool Iterator::has_next()
 {
 	return false;

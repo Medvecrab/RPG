@@ -10,6 +10,8 @@ protected:
 	int health;
 	int resource;
 public:
+	Character();
+	Character(std::string, int);
 	std::string get_name();
 	int get_health();
 	void set_health(int);

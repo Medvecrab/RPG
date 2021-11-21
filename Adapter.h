@@ -5,7 +5,7 @@
 #include "World.h"
 #include "Class_ability.h"
 
-class Adapter : Class_ability
+class Adapter : public Class_ability
 {
 private:
 	Global_ability* adaptable;

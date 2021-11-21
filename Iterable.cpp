@@ -2,5 +2,5 @@
 
 Iterator* Iterable::init_iterator()
 {
-
+	return new Iterator();
 }

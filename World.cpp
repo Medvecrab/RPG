@@ -52,3 +52,22 @@ Player* World::get_player()
 	return current_player;
 }
 
+void World::save_world(std::string filename)
+{
+	Saver* saver = new Saver();
+	char flag = 0;
+	std::cout << "Save as txt? y/n" << std::endl;
+	std::cin >> flag;
+	if (flag == 'y')
+		saver = new Save_as_txt(saver);
+	std::cout << "Save as dat? y/n" << std::endl;
+	std::cin >> flag;
+	if (flag == 'y')
+		saver = new Save_as_dat(saver);
+	std::cout << "Save as wrld? y/n" << std::endl;
+	std::cin >> flag;
+	if (flag == 'y')
+		saver = new Save_as_wrld(saver);
+	saver->save_world(filename);
+}
+

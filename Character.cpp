@@ -1,5 +1,16 @@
 #include "Character.h"
 
+Character::Character()
+{
+
+}
+
+Character::Character(std::string new_name, int hp)
+{
+	health = hp;
+	name = new_name;
+}
+
 std::string Character::get_name()
 {
 	return name;
@@ -29,6 +40,7 @@ std::vector<Character*> Character::get_visible_characters()
 {
 	std::vector<Character*> visible_characters;
 	visible_characters.push_back(this);
+	return visible_characters;
 }
 
 void Character::spawn(int x, int y)

@@ -1,6 +1,9 @@
 #pragma once
 #include "Player.h"
 #include "Map.h"
+#include "Saver.h"
+#include "Saver_decorator.h"
+#include "Save_as.h"
 #include <string>
 #include <iostream>
 
@@ -18,5 +21,6 @@ public:
 	std::string get_current_player_name();
 	Map* get_map();
 	Player* get_player();
+	void save_world(std::string);
 };
 

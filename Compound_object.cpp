@@ -5,7 +5,7 @@ void Compound_object::react()
 
 }
 
-void Compound_object::add_env_obj(Enivironmental_object* obj)
+void Compound_object::add_env_obj(Environmental_object* obj)
 {
 	object_list.push_back(obj);
 }

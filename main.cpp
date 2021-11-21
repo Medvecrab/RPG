@@ -3,6 +3,6 @@
 int main()
 {
 	Tester* test = new Tester();
-	test->test_delegate();
-	test->test_proxy();
+	//test->test_adapter();
+	test->test_decorator();
 }
