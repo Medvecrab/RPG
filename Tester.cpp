@@ -42,3 +42,28 @@ void Tester::test_decorator()
 	World* wrld = new World();
 	wrld->save_world("file");
 }
+
+void Tester::test_composite()
+{
+	Primitive_object* first = new Primitive_object();
+	Compound_object* comp = new Compound_object();
+	comp->add_env_obj(new Primitive_object());
+	comp->add_env_obj(new Primitive_object());
+	comp->add_env_obj(new Compound_object());
+	comp->add_env_obj(new Compound_object());
+	comp->add_env_obj(new Compound_object());
+	first->react();
+	comp->react();
+}
+
+void Tester::test_iterator()
+{
+	Environment* env = new Environment();
+	env->add_NPC(new NPC("Sergey"));
+	env->add_NPC(new NPC("Oleg"));
+	Iterator* iter = env->init_iterator();
+	while (iter->has_next())
+	{
+		std::cout << iter->get_next()->get_name() << std::endl;
+	}
+}

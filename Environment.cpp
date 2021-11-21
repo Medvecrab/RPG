@@ -5,6 +5,11 @@ void Environment::spawn_NPCs()
 	//TODO: спавнить неписей используя итератор
 }
 
+void Environment::add_NPC(NPC* npc)
+{
+	assigned_NPCs.push_back(npc);
+}
+
 Iterator* Environment::init_iterator()
 {
 	return new Vector_iterator(assigned_NPCs);

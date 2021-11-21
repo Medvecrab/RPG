@@ -1,8 +1,17 @@
 #include "Compound_object.h"
 
-void Compound_object::react()
+Compound_object::Compound_object()
 {
 
+}
+
+void Compound_object::react()
+{
+	std::cout << "I'm compound and I store those primitives: " << std::endl;
+	for (auto prim : object_list)
+	{
+		prim->react();
+	}
 }
 
 void Compound_object::add_env_obj(Environmental_object* obj)

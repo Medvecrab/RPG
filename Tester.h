@@ -7,6 +7,10 @@
 #include "Saver.h"
 #include "Saver_decorator.h"
 #include "Save_as.h"
+#include "Environmental_object.h"
+#include "Compound_object.h"
+#include "Primitive_object.h"
+#include "Environment.h"
 #include <iostream>
 #include <stdio.h>
 

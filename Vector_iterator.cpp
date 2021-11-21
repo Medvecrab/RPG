@@ -8,7 +8,7 @@ Vector_iterator::Vector_iterator(std::vector<NPC*> input)
 
 bool Vector_iterator::has_next()
 {
-	if (index + 1 < iterable_vector.size())
+	if (index < iterable_vector.size())
 		return true;
 	else
 		return false;
