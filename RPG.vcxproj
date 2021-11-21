@@ -140,6 +140,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="Adapter.h" />
+    <ClInclude Include="Background_generator.h" />
     <ClInclude Include="Character.h" />
     <ClInclude Include="Class.h" />
     <ClInclude Include="Class_ability.h" />
@@ -149,6 +150,8 @@
     <ClInclude Include="Global_ability.h" />
     <ClInclude Include="Iterable.h" />
     <ClInclude Include="Iterator.h" />
+    <ClInclude Include="Loader.h" />
+    <ClInclude Include="Perlin_noise.h" />
     <ClInclude Include="Primitive_object.h" />
     <ClInclude Include="Map.h" />
     <ClInclude Include="NPC.h" />
@@ -159,10 +162,12 @@
     <ClInclude Include="Save_as.h" />
     <ClInclude Include="Tester.h" />
     <ClInclude Include="Vector_iterator.h" />
+    <ClInclude Include="Voronoi_diagramm.h" />
     <ClInclude Include="World.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Adapter.cpp" />
+    <ClCompile Include="Background_generator.cpp" />
     <ClCompile Include="Character.cpp" />
     <ClCompile Include="Class.cpp" />
     <ClCompile Include="Class_ability.cpp" />
@@ -172,7 +177,9 @@
     <ClCompile Include="Global_ability.cpp" />
     <ClCompile Include="Iterable.cpp" />
     <ClCompile Include="Iterator.cpp" />
+    <ClCompile Include="Loader.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="Perlin_noise.cpp" />
     <ClCompile Include="Primitive_object.cpp" />
     <ClCompile Include="Map.cpp" />
     <ClCompile Include="NPC.cpp" />
@@ -183,6 +190,7 @@
     <ClCompile Include="Save_as.cpp" />
     <ClCompile Include="Tester.cpp" />
     <ClCompile Include="Vector_iterator.cpp" />
+    <ClCompile Include="Voronoi_diagramm.cpp" />
     <ClCompile Include="World.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

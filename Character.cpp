@@ -30,3 +30,8 @@ std::vector<Character*> Character::get_visible_characters()
 	std::vector<Character*> visible_characters;
 	visible_characters.push_back(this);
 }
+
+void Character::spawn(int x, int y)
+{
+	std::cout << "Spawned at x = " << x << " , y = " << y << std::endl;
+}

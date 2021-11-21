@@ -3,5 +3,6 @@
 class NPC :
     public Character
 {
+
 };
 

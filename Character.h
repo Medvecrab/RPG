@@ -1,6 +1,7 @@
 #pragma once
 #include <string>
 #include <vector>
+#include <iostream>
 
 class Character
 {
@@ -15,5 +16,6 @@ public:
 	int get_resource();
 	void set_resource(int);
 	std::vector<Character*> get_visible_characters();
+	void spawn(int, int);
 };
 
