@@ -7,6 +7,6 @@ class Saver
 public:
 	Saver() {};
 	~Saver() {};
-	virtual void save_world(std::string filename) = 0;
+	virtual void save_world(std::string filename);
 };
 

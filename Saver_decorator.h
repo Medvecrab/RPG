@@ -3,7 +3,7 @@
 
 class Saver_decorator : Saver
 {
-private:
+protected:
 	Saver* wrapee;
 public:
 	Saver_decorator(Saver*);

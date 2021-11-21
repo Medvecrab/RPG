@@ -2,5 +2,5 @@
 
 void Saver::save_world(std::string filename) 
 {
-	std::cout << "World saved as " << filename << std::endl;
+	std::cout << "World saved!" << std::endl;
 }
