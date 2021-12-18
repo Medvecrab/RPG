@@ -157,6 +157,7 @@
     <ClInclude Include="Iterable.h" />
     <ClInclude Include="Iterator.h" />
     <ClInclude Include="Loader.h" />
+    <ClInclude Include="NPC_pool.h" />
     <ClInclude Include="Perlin_noise.h" />
     <ClInclude Include="Phys_Mag_Class.h" />
     <ClInclude Include="Primitive_object.h" />
@@ -194,6 +195,7 @@
     <ClCompile Include="Iterator.cpp" />
     <ClCompile Include="Loader.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="NPC_pool.cpp" />
     <ClCompile Include="Perlin_noise.cpp" />
     <ClCompile Include="Phys_Mag_Class.cpp" />
     <ClCompile Include="Primitive_object.cpp" />
