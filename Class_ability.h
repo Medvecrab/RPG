@@ -2,6 +2,7 @@
 #include <string>
 #include <iostream>
 #include "Character.h"
+#include "Scaling_visitor.h"
 
 class Class_ability
 {
@@ -13,5 +14,6 @@ public:
 	Class_ability(float, std::string);
 	virtual void cast(Character*);
 	virtual std::string get_description();
+	virtual void accept_visitor(Ability_visitor*);
 };
 

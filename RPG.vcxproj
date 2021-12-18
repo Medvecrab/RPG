@@ -141,6 +141,7 @@
   <ItemGroup>
     <ClInclude Include="Abilities.h" />
     <ClInclude Include="Ability_creator.h" />
+    <ClInclude Include="Ability_visitor.h" />
     <ClInclude Include="Abstract_factory.h" />
     <ClInclude Include="Adapter.h" />
     <ClInclude Include="Background_generator.h" />
@@ -178,6 +179,7 @@
     <ClInclude Include="Saver.h" />
     <ClInclude Include="Saver_decorator.h" />
     <ClInclude Include="Save_as.h" />
+    <ClInclude Include="Scaling_visitor.h" />
     <ClInclude Include="State.h" />
     <ClInclude Include="States.h" />
     <ClInclude Include="Tester.h" />
@@ -189,6 +191,7 @@
   <ItemGroup>
     <ClCompile Include="Abilities.cpp" />
     <ClCompile Include="Ability_creator.cpp" />
+    <ClCompile Include="Ability_visitor.cpp" />
     <ClCompile Include="Abstract_factory.cpp" />
     <ClCompile Include="Adapter.cpp" />
     <ClCompile Include="Background_generator.cpp" />
@@ -227,6 +230,7 @@
     <ClCompile Include="Saver.cpp" />
     <ClCompile Include="Saver_decorator.cpp" />
     <ClCompile Include="Save_as.cpp" />
+    <ClCompile Include="Scaling_visitor.cpp" />
     <ClCompile Include="State.cpp" />
     <ClCompile Include="States.cpp" />
     <ClCompile Include="Tester.cpp" />

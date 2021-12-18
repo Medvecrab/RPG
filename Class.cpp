@@ -15,3 +15,14 @@ std::string Class::get_description()
 {
 	return desc;
 }
+
+void Class::scale_abilities()
+{
+	Ability_visitor* visitor = new Scaling_visitor(1.05, 1); //вот эти константы "плохие", но их можно и нужно переделать
+	for (auto abil : list_of_abilities)
+	{
+		abil->accept_visitor(visitor);
+	}
+}
+
+

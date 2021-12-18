@@ -6,14 +6,15 @@
 
 class Class
 {
-	protected:	
-		std::string desc;
-	public:
-		std::vector <Class_ability*> list_of_abilities;
-		Class();
-		Class(std::string);
-		void add_ability();
-		std::string get_description();
-		virtual void use_ability(Character*, Class_ability*);
+protected:	
+	std::string desc;
+public:
+	std::vector <Class_ability*> list_of_abilities;
+	Class();
+	Class(std::string);
+	void add_ability();
+	std::string get_description();
+	virtual void use_ability(Character*, Class_ability*);
+	void scale_abilities();
 };
 

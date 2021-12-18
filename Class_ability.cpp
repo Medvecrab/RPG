@@ -20,3 +20,7 @@ std::string Class_ability::get_description()
 {
 	return desc;
 }
+
+void Class_ability::accept_visitor(Ability_visitor*)
+{
+}
