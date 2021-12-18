@@ -17,6 +17,7 @@ public:
 	Character();
 	Character(std::string, int);
 	std::string get_name();
+	void set_name(std::string);
 	int get_health();
 	void set_health(int);
 	int get_resource();

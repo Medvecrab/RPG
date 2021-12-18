@@ -6,9 +6,10 @@
 class Player :
     public Character
 {
-private:
-    
+private:  
 public:
+    int karma_points;
     Player(std::string);
+    Player();
 };
 
