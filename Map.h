@@ -6,11 +6,14 @@
 class Map
 {
 private:
+public:
+	//есть лишние функции, get set для некоторых полей, но старый код работает с ними.
 	std::string name;
+	int height;
+	int width;
 	std::string bg_image;
 	Environment* env;
 	Background_generator* bg_generator;
-public:
 	std::string get_name();
 	void set_name(std::string);
 	Environment* get_env();

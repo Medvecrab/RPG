@@ -13,8 +13,8 @@ private:
 	std::vector <NPC*> assigned_NPCs;
 	std::vector <std::pair<int,int>> spawn_points; //координаты, может как-то прикреплять их к неписям
 	std::vector <Unique_state_env_obj*> env_objects; //потом заменить на Unique state
-	NPC_pool* pool;
 public:
+	NPC_pool* pool;
 	void add_NPC(NPC*);
 	void spawn_NPCs();
 	Iterator* init_iterator() override;

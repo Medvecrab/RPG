@@ -159,6 +159,9 @@
     <ClInclude Include="Iterable.h" />
     <ClInclude Include="Iterator.h" />
     <ClInclude Include="Loader.h" />
+    <ClInclude Include="Map_history.h" />
+    <ClInclude Include="Map_snapshot.h" />
+    <ClInclude Include="Memento.h" />
     <ClInclude Include="NPC_pool.h" />
     <ClInclude Include="Perlin_noise.h" />
     <ClInclude Include="Phys_Mag_Class.h" />
@@ -203,6 +206,9 @@
     <ClCompile Include="Iterator.cpp" />
     <ClCompile Include="Loader.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="Map_history.cpp" />
+    <ClCompile Include="Map_snapshot.cpp" />
+    <ClCompile Include="Memento.cpp" />
     <ClCompile Include="NPC_pool.cpp" />
     <ClCompile Include="Perlin_noise.cpp" />
     <ClCompile Include="Phys_Mag_Class.cpp" />
