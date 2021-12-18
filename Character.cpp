@@ -47,3 +47,21 @@ void Character::spawn(int x, int y)
 {
 	std::cout << "Spawned at x = " << x << " , y = " << y << std::endl;
 }
+
+void Character::set_class()
+{
+	std::cout << "Если вы хотите выбрать рукопашный класс, нажмите 1, если хотите выбрать дальнобойный класс, нажмите 2" << std::endl;
+	int choice;
+	std::cin >> choice;
+	if (choice == 1)
+		factory = new Melee_factory();
+	else
+		factory = new Ranged_factory();
+	std::cout << "Если вы хотите выбрать физический класс, нажмите 1, если хотите выбрать магический класс, нажмите 2" << std::endl;
+	std::cin >> choice;
+	if (choice == 1)
+		factory->create_physical();
+	else
+		factory->create_magical();
+	std::cout << "Класс создан" << std::endl; //можно сделать сообщение получше?
+}

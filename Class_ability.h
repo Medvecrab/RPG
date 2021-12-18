@@ -12,6 +12,6 @@ public:
 	Class_ability();
 	Class_ability(float, std::string);
 	virtual void cast(Character*);
-	std::string get_description();
+	virtual std::string get_description();
 };
 
