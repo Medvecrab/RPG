@@ -65,3 +65,16 @@ void Character::set_class()
 		factory->create_magical();
 	std::cout << "Класс создан" << std::endl; //можно сделать сообщение получше?
 }
+
+void Character::check_health()
+{
+	if (health < 0)
+		state = new Dead();
+	else
+		state = new Alive;
+}
+
+void Character::interact(Character* target)
+{
+	target->state->interact();
+}

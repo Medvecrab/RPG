@@ -4,6 +4,7 @@
 #include <iostream>
 #include "Four_classes.h"
 #include "Concrete_factories.h"
+#include "States.h"
 
 class Character
 {
@@ -13,6 +14,7 @@ protected:
 	int resource;
 	Abstract_factory* factory;
 public:
+	State* state;
 	float x, y;
 	Character();
 	Character(std::string, int);
@@ -25,5 +27,8 @@ public:
 	std::vector<Character*> get_visible_characters();
 	void spawn(int, int);
 	void set_class();
+	void check_health();
+	void interact(Character*);
 };
 
+ 

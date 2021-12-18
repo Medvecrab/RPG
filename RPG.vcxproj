@@ -173,6 +173,8 @@
     <ClInclude Include="Saver.h" />
     <ClInclude Include="Saver_decorator.h" />
     <ClInclude Include="Save_as.h" />
+    <ClInclude Include="State.h" />
+    <ClInclude Include="States.h" />
     <ClInclude Include="Tester.h" />
     <ClInclude Include="Unique_state_env_obj.h" />
     <ClInclude Include="Vector_iterator.h" />
@@ -215,6 +217,8 @@
     <ClCompile Include="Saver.cpp" />
     <ClCompile Include="Saver_decorator.cpp" />
     <ClCompile Include="Save_as.cpp" />
+    <ClCompile Include="State.cpp" />
+    <ClCompile Include="States.cpp" />
     <ClCompile Include="Tester.cpp" />
     <ClCompile Include="Unique_state_env_obj.cpp" />
     <ClCompile Include="Vector_iterator.cpp" />
