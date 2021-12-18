@@ -1,7 +1,8 @@
 #include "World.h"
 
-World::World()
+World::World(std::string new_name)
 {
+	this->name = new_name;
 	this->current_map = new Map("nomap");
 	this->current_player = new Player("noplayer");
 }
@@ -69,5 +70,14 @@ void World::save_world(std::string filename)
 	if (flag == 'y')
 		saver = new Save_as_wrld(saver);
 	saver->save_world(filename);
+}
+
+World* World::get_instance(std::string name)
+{
+	if (instance == nullptr)
+	{
+		instance = new World(name);
+	}
+	return instance;
 }
 

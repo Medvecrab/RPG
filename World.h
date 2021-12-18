@@ -12,8 +12,10 @@ class World
 private: 
 	Player* current_player;
 	Map* current_map;
+	static World* instance;
+	std::string name;
+	World(std::string);
 public:
-	World();
 	~World();
 	int load_map(Map* map);
 	int change_player(Player* player);
@@ -22,5 +24,6 @@ public:
 	Map* get_map();
 	Player* get_player();
 	void save_world(std::string);
+	World* get_instance(std::string);
 };
 
