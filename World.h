@@ -4,6 +4,7 @@
 #include "Saver.h"
 #include "Saver_decorator.h"
 #include "Save_as.h"
+#include "Difficulty.h"
 #include <string>
 #include <iostream>
 
@@ -15,6 +16,7 @@ private:
 	static World* instance;
 	std::string name;
 	World(std::string);
+	Difficulty* current_difficulty;
 public:
 	~World();
 	int load_map(Map* map);
@@ -25,5 +27,6 @@ public:
 	Player* get_player();
 	void save_world(std::string);
 	World* get_instance(std::string);
+	void set_difficulty(Difficulty_type, std::string);
 };
 

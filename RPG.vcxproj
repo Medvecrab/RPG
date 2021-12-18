@@ -150,6 +150,7 @@
     <ClInclude Include="Compound_object.h" />
     <ClInclude Include="Concrete_factories.h" />
     <ClInclude Include="Different_ability_creators.h" />
+    <ClInclude Include="Difficulty.h" />
     <ClInclude Include="Environmental_object.h" />
     <ClInclude Include="Environment.h" />
     <ClInclude Include="Four_classes.h" />
@@ -187,6 +188,7 @@
     <ClCompile Include="Compound_object.cpp" />
     <ClCompile Include="Concrete_factories.cpp" />
     <ClCompile Include="Different_ability_creators.cpp" />
+    <ClCompile Include="Difficulty.cpp" />
     <ClCompile Include="Environmental_object.cpp" />
     <ClCompile Include="Environment.cpp" />
     <ClCompile Include="Four_classes.cpp" />
