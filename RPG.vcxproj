@@ -144,6 +144,8 @@
     <ClInclude Include="Abstract_factory.h" />
     <ClInclude Include="Adapter.h" />
     <ClInclude Include="Background_generator.h" />
+    <ClInclude Include="Behaviour.h" />
+    <ClInclude Include="Behaviours.h" />
     <ClInclude Include="Builder.h" />
     <ClInclude Include="Character.h" />
     <ClInclude Include="Class.h" />
@@ -190,6 +192,8 @@
     <ClCompile Include="Abstract_factory.cpp" />
     <ClCompile Include="Adapter.cpp" />
     <ClCompile Include="Background_generator.cpp" />
+    <ClCompile Include="Behaviour.cpp" />
+    <ClCompile Include="Behaviours.cpp" />
     <ClCompile Include="Builder.cpp" />
     <ClCompile Include="Character.cpp" />
     <ClCompile Include="Class.cpp" />
