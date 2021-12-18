@@ -2,8 +2,9 @@
 #include <string>
 #include <vector>
 #include "Environmental_object.h"
+#include "Prototype.h"
 
-class Unique_state_env_obj
+class Unique_state_env_obj : public Prototype
 {
 private:
 	std::string name;
@@ -17,5 +18,6 @@ public:
 	Unique_state_env_obj(std::string, int hp, int x, int y);
 	void set_env_obj(Environmental_object*);
 	void react();
+	Prototype* clone() override;
 };
 

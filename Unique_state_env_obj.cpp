@@ -18,3 +18,9 @@ void Unique_state_env_obj::react()
 	if (env_obj != nullptr)
 		env_obj->react();
 }
+
+Prototype* Unique_state_env_obj::clone()
+{
+	Unique_state_env_obj* clone = new Unique_state_env_obj(name, health, coordinates.first, coordinates.second);
+	return clone;
+}

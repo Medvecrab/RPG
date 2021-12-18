@@ -163,6 +163,7 @@
     <ClInclude Include="Map.h" />
     <ClInclude Include="NPC.h" />
     <ClInclude Include="Player.h" />
+    <ClInclude Include="Prototype.h" />
     <ClInclude Include="Proxy_world.h" />
     <ClInclude Include="Saver.h" />
     <ClInclude Include="Saver_decorator.h" />
@@ -199,6 +200,7 @@
     <ClCompile Include="Map.cpp" />
     <ClCompile Include="NPC.cpp" />
     <ClCompile Include="Player.cpp" />
+    <ClCompile Include="Prototype.cpp" />
     <ClCompile Include="Proxy_world.cpp" />
     <ClCompile Include="Saver.cpp" />
     <ClCompile Include="Saver_decorator.cpp" />
