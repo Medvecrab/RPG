@@ -2,6 +2,7 @@
 #include <vector>
 #include <string>
 #include "Class_ability.h"
+#include "Different_ability_creators.h"
 
 class Class
 {
@@ -10,7 +11,7 @@ class Class
 		std::string desc;
 	public:
 		Class(std::string);
-		void add_ability(Class_ability* abil);
+		void add_ability();
 		std::string get_description();
 };
 
