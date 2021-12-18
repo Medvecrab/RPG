@@ -14,6 +14,7 @@ private:
 	std::vector <std::pair<int,int>> spawn_points; //координаты, может как-то прикреплять их к неписям
 	std::vector <Unique_state_env_obj*> env_objects; //потом заменить на Unique state
 public:
+
 	NPC_pool* pool;
 	void add_NPC(NPC*);
 	void spawn_NPCs();

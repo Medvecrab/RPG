@@ -3,8 +3,9 @@
 #include <string>
 #include "Class_ability.h"
 #include "Different_ability_creators.h"
+#include "Subscriber.h"
 
-class Class
+class Class : Subscriber
 {
 protected:	
 	std::string desc;
