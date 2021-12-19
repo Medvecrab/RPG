@@ -1,6 +1,7 @@
 #pragma once
 #include "Subscriber.h"
 #include <vector>
+#include <string>
 #include <iostream>
 
 class Publisher

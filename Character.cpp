@@ -16,6 +16,11 @@ std::string Character::get_name()
 	return name;
 }
 
+void Character::set_name(std::string new_name)
+{
+	name = new_name;
+}
+
 int Character::get_health()
 {
 	return health;
@@ -26,10 +31,6 @@ void Character::set_health(int set_health)
 	health = set_health;
 }
 
-std::string Character::get_name()
-{
-	return std::string();
-}
 
 int Character::get_resource()
 {

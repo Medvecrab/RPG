@@ -1,9 +1,6 @@
 #pragma once
-#include <string>
-#include "Character.h"
-#include "Global_ability.h"
-#include "World.h"
 #include "Class_ability.h"
+#include "Global_ability.h"
 
 class Adapter : public Class_ability
 {

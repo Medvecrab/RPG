@@ -1,4 +1,5 @@
 #include "Abilities.h"
+#include "Character.h"
 
 Damage_ability::Damage_ability(int damage, float range, std::string description) : Class_ability(range, description)
 {
@@ -14,7 +15,7 @@ void Damage_ability::accept_visitor(Ability_visitor* visitor)
 void Damage_ability::cast(Character* target)
 {
 	target->set_health(target->get_health() - damage_formula);
-	std::cout << "Название способности " << get_description() << std::endl << "Урон нанесён: " << damage_formula << std::endl;
+	std::cout << "Название способности " << this->get_description() << std::endl << "Урон нанесён: " << damage_formula << std::endl;
 }
 
 Healing_ability::Healing_ability(int healing, float range, std::string description) : Class_ability(range, description)
@@ -30,7 +31,7 @@ void Healing_ability::accept_visitor(Ability_visitor* visitor)
 void Healing_ability::cast(Character* target)
 {
 	target->set_health(target->get_health() + healing_formula);
-	std::cout << "Название способности " << get_description() << std::endl << "Лечение применено" << std::endl;
+	std::cout << "Название способности " << this->get_description() << std::endl << "Лечение применено" << std::endl;
 }
 
 Status_ability::Status_ability(std::string status_name, int duration, float range, std::string description) : Class_ability(range, description)
@@ -46,5 +47,5 @@ void Status_ability::accept_visitor(Ability_visitor* visitor)
 
 void Status_ability::cast(Character* target)
 {
-	std::cout << "Название способности " << get_description() << std::endl << "Статусный эффект " << applied_status << " применён к цели " << target->get_name() << std::endl;
+	std::cout << "Название способности " << this->get_description() << std::endl << "Статусный эффект " << applied_status << " применён к цели " << target->get_name() << std::endl;
 }

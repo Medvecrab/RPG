@@ -12,7 +12,7 @@
 
 void Tester::test_proxy() //это работает
 {
-	Proxy_world* p_world = new Proxy_world();
+	/*Proxy_world* p_world = new Proxy_world();
 	Player* player = new Player("Alexei");
 	Map* map = new Map("Russia");
 	p_world->load_map(map);
@@ -20,12 +20,12 @@ void Tester::test_proxy() //это работает
 	World* world = new World("new world");
 	p_world->init_world(world);
 	p_world->load_map(map);
-	p_world->change_player(player);
+	p_world->change_player(player);*/
 }
 
 void Tester::test_adapter()
 {
-	Class_ability* first = new Class_ability("fireball", 50, 0);
+	/*Class_ability* first = new Class_ability("fireball", 50, 0);
 	Global_ability* second = new Global_ability("firerain", 10, 0);
 	Class_ability* adapt = new Adapter(second);
 	Character* vitaly = new Character("Vitaly", 100);
@@ -34,18 +34,18 @@ void Tester::test_adapter()
 	std::cout << "Name: " << vitaly->get_name() << ", Health: " << vitaly->get_health() << std::endl;
 	adapt->cast(vitaly);
 	std::cout << "Name: " << vitaly->get_name() << ", Health: " << vitaly->get_health() << std::endl;
-	//использует способность дважды, потому что пока что метод "найти всех Ќ»ѕ в поле зрени€" написан криво.
+	//использует способность дважды, потому что пока что метод "найти всех Ќ»ѕ в поле зрени€" написан криво.*/
 }
 
 void Tester::test_decorator()
 {
-	World* wrld = new World();
-	wrld->save_world("file");
+	/*World* wrld = new World();
+	wrld->save_world("file");*/
 }
 
 void Tester::test_composite()
 {
-	Primitive_object* first = new Primitive_object("rocky");
+	/*Primitive_object* first = new Primitive_object("rocky");
 	Compound_object* comp = new Compound_object("wooden");
 	comp->add_env_obj(new Primitive_object("golden"));
 	comp->add_env_obj(new Primitive_object("golden"));
@@ -53,11 +53,12 @@ void Tester::test_composite()
 	comp->add_env_obj(new Compound_object("hole"));
 	comp->add_env_obj(new Compound_object("barrel"));
 	first->react();
-	comp->react();
+	comp->react();*/
 }
 
 void Tester::test_iterator()
 {
+	/*
 	Environment* env = new Environment();
 	env->add_NPC(new NPC("Sergey"));
 	env->add_NPC(new NPC("Oleg"));
@@ -65,7 +66,7 @@ void Tester::test_iterator()
 	while (iter->has_next())
 	{
 		std::cout << iter->get_next()->get_name() << std::endl;
-	}
+	}*/
 }
 
 void Tester::test_bridge()
@@ -81,7 +82,7 @@ void Tester::test_bridge()
 
 void Tester::test_flyweight()
 {
-	Primitive_object* prim = new Primitive_object("rocky");
+	/*Primitive_object* prim = new Primitive_object("rocky");
 	Unique_state_env_obj* exact_env_obj = new Unique_state_env_obj("rock", 200, 0, 0);
 	Unique_state_env_obj* exact_env_obj_2 = new Unique_state_env_obj("boulder", 300, 50, 50);
 	exact_env_obj->set_env_obj(prim);
@@ -90,15 +91,15 @@ void Tester::test_flyweight()
 	exact_env_obj_3->set_env_obj(new Compound_object("wooden"));
 	exact_env_obj->react();
 	exact_env_obj_2->react();
-	exact_env_obj_3->react();
+	exact_env_obj_3->react();*/
 }
 
 void Tester::test_facade()
 {
-	Map* map = new Map("Voronezh");
+	/*Map* map = new Map("Voronezh");
 	map->set_env(new Environment());
 	map->add_env_object(new Unique_state_env_obj("statue", 150, 40, 40));
-	map->add_env_object(new Unique_state_env_obj("fountain", 50, 80, 80));
+	map->add_env_object(new Unique_state_env_obj("fountain", 50, 80, 80));*/
 }
 
 void Tester::test_factory()
@@ -126,11 +127,11 @@ void Tester::test_abstract_factory()
 
 void Tester::test_singleton()
 {
-	World* new_world;
-	new_world = new_world->get_instance("brave new world");
+	World* new_world = World::get_instance("brave new world");
 	std::cout << new_world->name << std::endl;
 	new_world = new_world->get_instance("old world");
 	std::cout << new_world->name << std::endl;
+	delete new_world;
 }
 
 void Tester::test_prototype()
@@ -144,8 +145,7 @@ void Tester::test_prototype()
 
 void Tester::test_builder()
 {
-	World* new_world;
-	new_world = new_world->get_instance("brave new world");
+	World* new_world = World::get_instance("brave new world");
 	Player_director* direct = new Player_director();
 	Player* tester = direct->make_warrior();
 	new_world->change_player(tester);
@@ -153,16 +153,18 @@ void Tester::test_builder()
 	new_world->change_player(tester);
 	tester = direct->make_custom();
 	new_world->change_player(tester);
+	delete new_world;
 }
 
 void Tester::test_multiton()
 {
-	World* new_world;
-	new_world = new_world->get_instance("brave new world");
+	World* new_world = World::get_instance("brave new world");
+	//new_world = new_world->get_instance("brave new world");
 	new_world->set_difficulty(EASY, "babymode");
 	new_world->set_difficulty(MEDIUM, "let the games begin");
 	new_world->set_difficulty(HARD, "ULTRA NIGHTMARE");
 	new_world->set_difficulty(EASY, "game journalist");
+	delete new_world;
 }
 
 void Tester::test_object_pool()

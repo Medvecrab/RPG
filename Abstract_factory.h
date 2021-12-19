@@ -1,6 +1,5 @@
 #pragma once
-
-#include "Class.h" 
+#include "Class.h"
 
 class Abstract_factory
 {

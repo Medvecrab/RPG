@@ -1,5 +1,6 @@
 #pragma once
 #include "Environmental_object.h"
+#include <string>
 
 class Primitive_object : public Environmental_object
 {

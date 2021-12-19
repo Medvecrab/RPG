@@ -1,8 +1,8 @@
 #pragma once
 #include <string>
-#include <iostream>
-#include "Character.h"
-#include "Scaling_visitor.h"
+#include "Ability_visitor.h"
+
+class Character;
 
 class Class_ability
 {

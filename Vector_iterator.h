@@ -1,7 +1,5 @@
 #pragma once
-#include <vector>
 #include "Iterator.h"
-#include "NPC.h"
 
 class Vector_iterator : public Iterator
 {

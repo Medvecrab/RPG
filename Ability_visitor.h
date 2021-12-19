@@ -1,5 +1,8 @@
 #pragma once
-#include "Abilities.h"
+
+class Damage_ability; //??
+class Healing_ability;
+class Status_ability;
 
 class Ability_visitor
 {

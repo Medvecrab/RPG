@@ -1,6 +1,7 @@
 #pragma once
 #include "Ability_creator.h"
 #include "Abilities.h"
+
 class Damage_ability_creator : public Ability_creator
 {
 private:

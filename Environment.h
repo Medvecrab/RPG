@@ -1,11 +1,8 @@
 #pragma once
 #include "Iterable.h"
-#include "NPC.h"
-#include "Environmental_object.h"
 #include "Unique_state_env_obj.h"
-#include "Vector_iterator.h"
 #include "NPC_pool.h"
-#include <vector>
+#include "Vector_iterator.h"
 
 class Environment : Iterable
 {

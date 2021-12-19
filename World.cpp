@@ -1,5 +1,7 @@
 #include "World.h"
 
+World* World::instance = nullptr;
+
 World::World(std::string new_name)
 {
 	this->name = new_name;

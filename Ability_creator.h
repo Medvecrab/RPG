@@ -1,5 +1,4 @@
 #pragma once
-
 #include "Class_ability.h"
 
 class Ability_creator

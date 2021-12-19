@@ -1,5 +1,8 @@
 #pragma once
 #include "Class_ability.h"
+#include <iostream>
+
+class Character;
 
 class Damage_ability : public Class_ability
 {

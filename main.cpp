@@ -2,6 +2,7 @@
 
 int main()
 {
+	setlocale(LC_ALL, "Russian");
 	Tester* test = new Tester();
 	/*test->test_adapter();
 	test->test_decorator();

@@ -1,5 +1,7 @@
 #pragma once
 #include "Class.h"
+#include <string>
+
 class Physical : public Class
 {
 public:

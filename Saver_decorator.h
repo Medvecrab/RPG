@@ -1,5 +1,6 @@
 #pragma once
 #include "Saver.h"
+#include <string>
 
 class Saver_decorator : public Saver
 {

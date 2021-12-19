@@ -1,5 +1,5 @@
 #pragma once
-#include "Character.h"
+#include "NPC.h"
 
 class Iterator
 {

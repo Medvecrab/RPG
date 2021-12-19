@@ -1,5 +1,6 @@
 #pragma once
 #include "Abstract_factory.h"
+#include <iostream>
 #include "Four_classes.h"
 
 class Melee_factory : public Abstract_factory

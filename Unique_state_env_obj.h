@@ -1,9 +1,7 @@
 #pragma once
-#include <string>
-#include <vector>
-#include "Environmental_object.h"
 #include "Prototype.h"
 #include "Behaviours.h"
+#include "Environmental_object.h"
 
 class Unique_state_env_obj : public Prototype
 {

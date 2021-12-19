@@ -1,5 +1,4 @@
 #pragma once
-
 #include "Phys_Mag_Class.h"
 
 class Physical_Melee : public Physical

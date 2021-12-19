@@ -1,6 +1,7 @@
 #pragma once
+#include "Map.h"
 #include "Memento.h"
-#include <time.h>
+
 class Map_snapshot : public Memento
 {
 private:

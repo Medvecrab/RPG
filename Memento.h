@@ -1,6 +1,7 @@
 #pragma once
 #include <string>
-#include "Map.h"
+#include "Environment.h"
+#include "Background_generator.h"
 
 class Memento
 {

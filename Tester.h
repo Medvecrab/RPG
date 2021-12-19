@@ -19,6 +19,8 @@
 #include "Player_director.h"
 #include "Map_history.h"
 #include "Publisher.h"
+#include "Abilities.h"
+#include "Different_ability_creators.h"
 #include <iostream>
 #include <stdio.h>
 

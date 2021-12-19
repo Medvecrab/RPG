@@ -1,10 +1,9 @@
 #pragma once
 #include <string>
-#include <vector>
 #include <iostream>
-#include "Four_classes.h"
-#include "Concrete_factories.h"
 #include "States.h"
+#include "Abstract_factory.h"
+#include "Concrete_factories.h"
 
 class Character
 {
@@ -19,8 +18,6 @@ public:
 	float x, y;
 	Character();
 	Character(std::string, int);
-	std::string get_name();
-	void set_name(std::string);
 	int get_health();
 	void set_health(int);
 	int get_resource();
@@ -30,6 +27,8 @@ public:
 	void set_class(int, int);
 	void check_health();
 	void interact(Character*);
+	std::string get_name();
+	void set_name(std::string);
 };
 
  

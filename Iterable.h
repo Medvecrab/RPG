@@ -1,5 +1,6 @@
 #pragma once
 #include "Iterator.h"
+
 class Iterable
 {
 public:

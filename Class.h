@@ -1,9 +1,10 @@
 #pragma once
 #include <vector>
-#include <string>
 #include "Class_ability.h"
-#include "Different_ability_creators.h"
 #include "Subscriber.h"
+#include "Scaling_visitor.h" //плохо
+
+class Character;
 
 class Class : public Subscriber
 {

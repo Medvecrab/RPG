@@ -1,9 +1,5 @@
 #pragma once
 #include "World.h"
-#include "Player.h"
-#include "Map.h"
-#include <stdio.h>
-#include <iostream>
 
 class Proxy_world
 {

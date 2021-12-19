@@ -1,6 +1,5 @@
 #pragma once
 #include "NPC.h"
-#include <vector>
 
 class NPC_pool
 {
