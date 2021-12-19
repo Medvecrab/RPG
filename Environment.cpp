@@ -1,6 +1,6 @@
 #include "Environment.h"
 
-void Environment::add_NPC(NPC*)
+void Environment::add_NPC()
 {
 	assigned_NPCs.push_back(pool->get_NPC());
 }

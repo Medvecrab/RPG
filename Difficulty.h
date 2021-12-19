@@ -19,5 +19,6 @@ private:
 	Difficulty(std::string);
 public:
 	Difficulty* get_instance(Difficulty_type, std::string);
+	std::string get_name();
 };
 

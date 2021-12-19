@@ -5,7 +5,7 @@
 #include "Different_ability_creators.h"
 #include "Subscriber.h"
 
-class Class : Subscriber
+class Class : public Subscriber
 {
 protected:	
 	std::string desc;
@@ -13,9 +13,9 @@ public:
 	std::vector <Class_ability*> list_of_abilities;
 	Class();
 	Class(std::string);
-	void add_ability();
+	void add_ability(Class_ability*);
 	std::string get_description();
-	virtual void use_ability(Character*, Class_ability*);
+	virtual void use_ability(Character*, int);
 	void scale_abilities();
 };
 

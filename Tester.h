@@ -16,6 +16,9 @@
 #include "Voronoi_diagramm.h"
 #include "Loader.h"
 #include "Unique_state_env_obj.h"
+#include "Player_director.h"
+#include "Map_history.h"
+#include "Publisher.h"
 #include <iostream>
 #include <stdio.h>
 
@@ -31,5 +34,18 @@ public:
 	void test_bridge();
 	void test_flyweight();
 	void test_facade();
+	void test_factory();
+	void test_abstract_factory();
+	void test_singleton();
+	void test_prototype();
+	void test_builder();
+	void test_multiton();
+	void test_object_pool();
+	void test_state();
+	void test_memento();
+	void test_strategy();
+	//void test_visitor();
+	//void test_observer();
+	void test_visitor_and_observer();
 };
 

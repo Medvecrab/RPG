@@ -21,4 +21,5 @@ void Publisher::notify_subscribers()
 	{
 		sub->scale_abilities();
 	}
+	std::cout << "Подписчики уведомлены" << std::endl;
 }

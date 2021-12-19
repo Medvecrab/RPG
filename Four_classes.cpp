@@ -1,9 +1,9 @@
 #include "Four_classes.h"
 
-void Physical_Melee::use_ability(Character* target, Class_ability* ability)
+void Physical_Melee::use_ability(Character* target, int i)
 {
 	//проверять дальность использования способностей надо будет в самом персонаже.
-	ability->cast(target);
+	list_of_abilities[i]->cast(target);
 }
 
 Physical_Melee::Physical_Melee()
@@ -11,9 +11,9 @@ Physical_Melee::Physical_Melee()
 	desc = "Физический рукопашный класс";
 }
 
-void Physical_Ranged::use_ability(Character* target, Class_ability* ability)
+void Physical_Ranged::use_ability(Character* target, int i)
 {
-	ability->cast(target);
+	list_of_abilities[i]->cast(target);
 }
 
 Physical_Ranged::Physical_Ranged()
@@ -21,9 +21,9 @@ Physical_Ranged::Physical_Ranged()
 	desc = "Физический дальнобойный класс";
 }
 
-void Magical_Melee::use_ability(Character* target, Class_ability* ability)
+void Magical_Melee::use_ability(Character* target, int i)
 {
-	ability->cast(target);
+	list_of_abilities[i]->cast(target);
 }
 
 Magical_Melee::Magical_Melee()
@@ -31,10 +31,11 @@ Magical_Melee::Magical_Melee()
 	desc = "Магический рукопашный класс";
 }
 
-void Magical_Ranged::use_ability(Character* target, Class_ability* ability)
+void Magical_Ranged::use_ability(Character* target, int i)
 {
-	ability->cast(target);
+	list_of_abilities[i]->cast(target);
 }
+
 
 Magical_Ranged::Magical_Ranged()
 {

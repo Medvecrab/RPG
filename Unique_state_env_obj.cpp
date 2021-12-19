@@ -30,7 +30,7 @@ void Unique_state_env_obj::set_behaviour(std::string str)
 		behaviour = new Destroyed();
 }
 
-Prototype* Unique_state_env_obj::clone()
+Unique_state_env_obj* Unique_state_env_obj::clone()
 {
 	Unique_state_env_obj* clone = new Unique_state_env_obj(name, health, coordinates.first, coordinates.second);
 	return clone;

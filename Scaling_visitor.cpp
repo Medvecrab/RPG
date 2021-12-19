@@ -14,3 +14,9 @@ void Scaling_visitor::visit_status(Status_ability* abil)
 {
 	abil->status_duration = abil->status_duration + status_extender;
 }
+
+Scaling_visitor::Scaling_visitor(float mult, int add)
+{
+	formula_multiplier = mult;
+	status_extender = add;
+}

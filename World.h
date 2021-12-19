@@ -14,10 +14,10 @@ private:
 	Player* current_player;
 	Map* current_map;
 	static World* instance;
-	std::string name;
 	World(std::string);
 	Difficulty* current_difficulty;
 public:
+	std::string name;
 	~World();
 	int load_map(Map* map);
 	int change_player(Player* player);

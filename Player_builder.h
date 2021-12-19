@@ -13,5 +13,6 @@ public:
 	void build_resource(int);
 	void build_karma_points(int);
 	void build_name(std::string);
+	void build_class(int, int);
 	Player* get_player();
 };

@@ -13,6 +13,7 @@ protected:
 	int health;
 	int resource;
 	Abstract_factory* factory;
+	Class* game_class;
 public:
 	State* state;
 	float x, y;
@@ -26,7 +27,7 @@ public:
 	void set_resource(int);
 	std::vector<Character*> get_visible_characters();
 	void spawn(int, int);
-	void set_class();
+	void set_class(int, int);
 	void check_health();
 	void interact(Character*);
 };
