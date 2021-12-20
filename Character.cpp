@@ -56,16 +56,20 @@ void Character::spawn(int x, int y)
 
 void Character::set_class(int choice, int choice2) //можно передавать класс и дальность сразу, костыль дл€ builder
 {
-	std::cout << "≈сли вы хотите выбрать рукопашный класс, нажмите 1, если хотите выбрать дальнобойный класс, нажмите 2" << std::endl;
-	if (choice == -1) //костыль дл€ builder
+	if (choice == -1)//костыль дл€ builder
+	{
+		std::cout << "≈сли вы хотите выбрать рукопашный класс, нажмите 1, если хотите выбрать дальнобойный класс, нажмите 2" << std::endl;
 		std::cin >> choice;
+	}
 	if (choice == 1)
 		factory = new Melee_factory();
 	else
 		factory = new Ranged_factory();
-	std::cout << "≈сли вы хотите выбрать физический класс, нажмите 1, если хотите выбрать магический класс, нажмите 2" << std::endl;
-	if (choice2 == -1) //костыль дл€ builder
+	if (choice2 == -1)//костыль дл€ builder
+	{
+		std::cout << "≈сли вы хотите выбрать физический класс, нажмите 1, если хотите выбрать магический класс, нажмите 2" << std::endl;
 		std::cin >> choice2;
+	}
 	if (choice2 == 1)
 		game_class = factory->create_physical();
 	else
@@ -75,7 +79,7 @@ void Character::set_class(int choice, int choice2) //можно передавать класс и да
 
 void Character::check_health()
 {
-	if (health < 0)
+	if (health <= 0)
 		state = new Dead();
 	else
 		state = new Alive;

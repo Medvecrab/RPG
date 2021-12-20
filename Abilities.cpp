@@ -47,5 +47,6 @@ void Status_ability::accept_visitor(Ability_visitor* visitor)
 
 void Status_ability::cast(Character* target)
 {
-	std::cout << "Название способности " << this->get_description() << std::endl << "Статусный эффект " << applied_status << " применён к цели " << target->get_name() << std::endl;
+	std::cout << "Название способности " << this->get_description() << std::endl;
+	std::cout << "Статусный эффект " << applied_status << " применён к цели " << target->get_name() << ", длительность эффекта " << status_duration << std::endl;
 }

@@ -11,7 +11,7 @@ World::World(std::string new_name)
 
 World::~World()
 {
-	
+	//delete current_difficulty;
 }
 
 int World::load_map(Map* map)
@@ -83,9 +83,8 @@ World* World::get_instance(std::string name)
 	return instance;
 }
 
-void World::set_difficulty(Difficulty_type type, std::string diff_name)
+/*void World::set_difficulty(Difficulty_type type, std::string diff_name)
 {
-	current_difficulty = current_difficulty->get_instance(type, diff_name);
+	current_difficulty = Difficulty::get_instance(type, diff_name);
 	std::cout << "Установлена сложность " << current_difficulty->get_name();
-}
-
+}*/

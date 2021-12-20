@@ -2,9 +2,16 @@
 
 Difficulty* Difficulty::get_instance(Difficulty_type type, std::string name)
 {
-    if (difficulties.find(type) == difficulties.end()) //ещё нет такой сложности
+    bool Diff_exists = false;
+    for (int i = 0; i < difficulties.size(); i++)
+    if (difficulty_types[i] == type) //ещё нет такой сложности
     {
-        difficulties.insert(std::make_pair(type, new Difficulty(name)));
+        Diff_exists = true;
+    }
+    if (!Diff_exists)
+    {
+        difficulties.push_back(new Difficulty(name));
+        difficulty_types.push_back(type);
     }
     return difficulties[type];
 }
@@ -17,4 +24,12 @@ std::string Difficulty::get_name()
 Difficulty::Difficulty(std::string new_name)
 {
     name = new_name;
+}
+
+Difficulty::~Difficulty()
+{
+    for (int i = 0; i < difficulties.size(); i++)
+    {
+        delete difficulties[i];
+    }
 }

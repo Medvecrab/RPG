@@ -24,10 +24,10 @@ void Map_history::get_history()
 	for (auto snap : snapshot_history)
 	{
 		std::cout << "Дата снимка " << snap->get_snapshot_date() << std::endl;
-		std::cout << "Имя карты " << snap->get_snapshot_date() << std::endl;
-		std::cout << "Высота карты " << snap->get_snapshot_date() << std::endl;
-		std::cout << "Ширина карты " << snap->get_snapshot_date() << std::endl;
-		std::cout << "Название изображения заднего фона " << snap->get_snapshot_date() << std::endl;
+		std::cout << "Имя карты " << snap->get_name() << std::endl;
+		std::cout << "Высота карты " << snap->get_height() << std::endl;
+		std::cout << "Ширина карты " << snap->get_width() << std::endl;
+		std::cout << "Название изображения заднего фона " << snap->get_bg_image() << std::endl;
 		//TODO:как-нибудь выводить информацию об остановке и генераторе заднего фона? но о генераторе даже информации нет
 	}
 }

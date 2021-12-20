@@ -10,7 +10,7 @@ int main()
 	test->test_iterator();
 	test->test_bridge();
 	test->test_flyweight();
-	test->test_facade();*/
+	test->test_facade();
 	test->test_factory();
 	test->test_abstract_factory();
 	test->test_singleton();
@@ -20,6 +20,6 @@ int main()
 	test->test_object_pool();
 	test->test_state();
 	test->test_memento();
-	test->test_strategy();
+	test->test_strategy();*/
 	test->test_visitor_and_observer();
 }

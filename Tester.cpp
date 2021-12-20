@@ -141,7 +141,7 @@ void Tester::test_prototype()
 	std::cout << "Первый объект: " << env_obj->name << "; Второй объект: " << new_obj->name << std::endl;
 	new_obj = env_obj->clone();
 	std::cout << "Первый объект: " << env_obj->name << "; Второй объект: " << new_obj->name << std::endl;
- }
+}
 
 void Tester::test_builder()
 {
@@ -156,16 +156,15 @@ void Tester::test_builder()
 	delete new_world;
 }
 
-void Tester::test_multiton()
-{
-	World* new_world = World::get_instance("brave new world");
-	//new_world = new_world->get_instance("brave new world");
-	new_world->set_difficulty(EASY, "babymode");
-	new_world->set_difficulty(MEDIUM, "let the games begin");
-	new_world->set_difficulty(HARD, "ULTRA NIGHTMARE");
-	new_world->set_difficulty(EASY, "game journalist");
-	delete new_world;
-}
+	void Tester::test_multiton()
+	{
+		/*World* new_world = World::get_instance("brave new world");
+		new_world->set_difficulty(EASY, "babymode");
+		new_world->set_difficulty(MEDIUM, "let the games begin");
+		new_world->set_difficulty(HARD, "ULTRA NIGHTMARE");
+		new_world->set_difficulty(EASY, "game journalist");
+		delete new_world;*/
+	}
 
 void Tester::test_object_pool()
 {
@@ -178,7 +177,7 @@ void Tester::test_object_pool()
 	std::cout << env->assigned_NPCs[0]->get_name() << std::endl;
 	std::cout << env->assigned_NPCs[1]->get_name() << std::endl;
 	std::cout << env->assigned_NPCs[2]->get_name() << std::endl;
-	std::cout << env->assigned_NPCs[3] << std::endl; //вывели nullptr
+	std::cout << env->assigned_NPCs[3] << std::endl; //вывели nullptr, потому что в пуле НИП закончились
 	pool->free_NPC(env->assigned_NPCs[2]); //освобождаем последнего НИП
 	std::cout << pool->get_NPC()->get_name() << std::endl;
 }
@@ -197,6 +196,8 @@ void Tester::test_state()
 void Tester::test_memento()
 {
 	Map* map = new Map("barnaul");
+	map->set_env(new Environment(new NPC_pool(3)));
+	map->set_bg_generator(new Background_generator());
 	Map_history* history = new Map_history(map);
 	history->save_map();
 	map->name = "new_barnaul";

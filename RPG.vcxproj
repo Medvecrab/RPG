@@ -144,7 +144,6 @@
     <ClInclude Include="Ability_visitor.h" />
     <ClInclude Include="Abstract_factory.h" />
     <ClInclude Include="Adapter.h" />
-    <ClInclude Include="all_headers.h" />
     <ClInclude Include="Background_generator.h" />
     <ClInclude Include="Behaviour.h" />
     <ClInclude Include="Behaviours.h" />
