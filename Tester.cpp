@@ -122,7 +122,22 @@ void Tester::test_factory()
 void Tester::test_abstract_factory()
 {
 	Character* test = new Character();
-	test->set_class(-1,-1);
+	Abstract_factory* fact;
+	std::cout << "Для создания магического персонажа нажмите 1, для создания физического персонажа - 2" << std::endl;
+	int choice;
+	bool isMagical;
+	std::cin >> choice;
+	if (choice == 1)
+		isMagical = true;
+	else
+		isMagical = false;
+	std::cout << "Для создания дальнобойного персонажа нажмите 1, для создания рукопашного персонажа - 2" << std::endl;
+	std::cin >> choice;
+	if (choice == 1)
+		test->factory = new Ranged_factory();
+	else
+		test->factory = new Melee_factory();
+	test->set_class(isMagical);
 }
 
 void Tester::test_singleton()

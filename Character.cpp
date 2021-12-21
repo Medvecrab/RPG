@@ -54,27 +54,12 @@ void Character::spawn(int x, int y)
 	std::cout << "Spawned at x = " << x << " , y = " << y << std::endl;
 }
 
-void Character::set_class(int choice, int choice2) //можно передавать класс и дальность сразу, костыль дл€ builder
+void Character::set_class(bool isMagical) //можно передавать класс и дальность сразу, костыль дл€ builder
 {
-	if (choice == -1)//костыль дл€ builder
-	{
-		std::cout << "≈сли вы хотите выбрать рукопашный класс, нажмите 1, если хотите выбрать дальнобойный класс, нажмите 2" << std::endl;
-		std::cin >> choice;
-	}
-	if (choice == 1)
-		factory = new Melee_factory();
-	else
-		factory = new Ranged_factory();
-	if (choice2 == -1)//костыль дл€ builder
-	{
-		std::cout << "≈сли вы хотите выбрать физический класс, нажмите 1, если хотите выбрать магический класс, нажмите 2" << std::endl;
-		std::cin >> choice2;
-	}
-	if (choice2 == 1)
-		game_class = factory->create_physical();
-	else
+	if (isMagical)
 		game_class = factory->create_magical();
-	std::cout << " ласс создан" << std::endl;
+	else
+		game_class = factory->create_physical();
 }
 
 void Character::check_health()

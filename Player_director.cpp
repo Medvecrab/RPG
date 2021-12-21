@@ -6,7 +6,7 @@ Player* Player_director::make_warrior()
 	builder->build_resource(0);
 	builder->build_name("Рыцарь Бдыщ-а-лот");
 	builder->build_karma_points(10);
-	builder->build_class(1,1);
+	//builder->build_class(1,1);
 	return builder->get_player();
 }
 
@@ -16,7 +16,7 @@ Player* Player_director::make_mage()
 	builder->build_resource(200);
 	builder->build_name("Волшебник Мэр Линг");
 	builder->build_karma_points(-5);
-	builder->build_class(2,2);
+	//builder->build_class(2,2);
 	return builder->get_player();
 }
 
@@ -59,12 +59,12 @@ Player* Player_director::make_custom()
 		std::cin >> karma;
 		builder->build_karma_points(karma);
 	}
-	std::cout << "Хотите установить класс персонажа? y/n" << std::endl;
+	/*std::cout << "Хотите установить класс персонажа? y/n" << std::endl;
 	std::cin >> ans;
 	if (ans == 'y')
 	{
 		builder->build_class(-1,-1);
-	}
+	}*/
 	return builder->get_player();
 }
 

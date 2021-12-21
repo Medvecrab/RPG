@@ -25,10 +25,10 @@ void Player_builder::build_name(std::string name)
 	result->set_name(name);
 }
 
-void Player_builder::build_class(int choice1, int choice2)
+/*void Player_builder::build_class(int choice1, int choice2)
 {
 	result->set_class(choice1, choice2);
-}
+}*/
 
 /*void Player_builder::build()
 {

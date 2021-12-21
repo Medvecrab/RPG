@@ -11,9 +11,9 @@ protected:
 	std::string name;
 	int health;
 	int resource;
-	Abstract_factory* factory;
 	Class* game_class;
 public:
+	Abstract_factory* factory;
 	State* state;
 	float x, y;
 	Character();
@@ -24,7 +24,7 @@ public:
 	void set_resource(int);
 	std::vector<Character*> get_visible_characters();
 	void spawn(int, int);
-	void set_class(int, int);
+	void set_class(bool);
 	void check_health();
 	void interact(Character*);
 	std::string get_name();
