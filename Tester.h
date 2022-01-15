@@ -25,6 +25,13 @@
 class Tester
 {
 public:
+	void play(); //"потестировать" "игру"
 	void main_menu(); //начало "создания игры", "главное меню"
+	void work_with_player(); //работа с персонажем игрока
+	Player* create_player();
+	void edit_player(Player*);
+	void work_with_map();
+	void edit_map(Map*);
+	void work_with_map_env(Map*);
 };
 

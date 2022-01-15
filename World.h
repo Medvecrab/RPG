@@ -13,7 +13,6 @@ private:
 	Player* current_player;
 	Map* current_map;
 	World(std::string);
-	//Difficulty* current_difficulty;
 	static World* instance;
 public:
 	std::string name;
@@ -26,5 +25,4 @@ public:
 	Player* get_player();
 	void save_world(std::string);
 	static World *get_instance(std::string);
-	//void set_difficulty(Difficulty_type, std::string);
 };

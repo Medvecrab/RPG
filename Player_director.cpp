@@ -27,7 +27,7 @@ Player* Player_director::make_custom()
 	std::cin >> ans;
 	if (ans == 'y')
 	{
-		std::cout << "¬ведите максимальное здоровье персонажа" << std::endl;
+		std::cout << "¬ведите максимальное здоровье персонажа " << std::endl;
 		int health;
 		std::cin >> health;
 		builder->build_health(health);
@@ -36,7 +36,7 @@ Player* Player_director::make_custom()
 	std::cin >> ans;
 	if (ans == 'y')
 	{
-		std::cout << "¬ведите максимальное значение ресурса персонажа" << std::endl;
+		std::cout << "¬ведите максимальное значение ресурса персонажа " << std::endl;
 		int resource;
 		std::cin >> resource;
 		builder->build_resource(resource);
@@ -45,7 +45,7 @@ Player* Player_director::make_custom()
 	std::cin >> ans;
 	if (ans == 'y')
 	{
-		std::cout << "¬ведите им€ персонажа" << std::endl;
+		std::cout << "¬ведите им€ персонажа " << std::endl;
 		std::string name;
 		std::cin >> name;
 		builder->build_name(name);
@@ -54,7 +54,7 @@ Player* Player_director::make_custom()
 	std::cin >> ans;
 	if (ans == 'y')
 	{
-		std::cout << "¬ведите очки кармы персонажа" << std::endl;
+		std::cout << "¬ведите очки кармы персонажа " << std::endl;
 		int karma;
 		std::cin >> karma;
 		builder->build_karma_points(karma);
