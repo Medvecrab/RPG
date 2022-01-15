@@ -143,7 +143,6 @@
     <ClInclude Include="Ability_creator.h" />
     <ClInclude Include="Ability_visitor.h" />
     <ClInclude Include="Abstract_factory.h" />
-    <ClInclude Include="Adapter.h" />
     <ClInclude Include="Background_generator.h" />
     <ClInclude Include="Behaviour.h" />
     <ClInclude Include="Behaviours.h" />
@@ -154,11 +153,9 @@
     <ClInclude Include="Compound_object.h" />
     <ClInclude Include="Concrete_factories.h" />
     <ClInclude Include="Different_ability_creators.h" />
-    <ClInclude Include="Difficulty.h" />
     <ClInclude Include="Environmental_object.h" />
     <ClInclude Include="Environment.h" />
     <ClInclude Include="Four_classes.h" />
-    <ClInclude Include="Global_ability.h" />
     <ClInclude Include="Iterable.h" />
     <ClInclude Include="Iterator.h" />
     <ClInclude Include="Loader.h" />
@@ -175,7 +172,6 @@
     <ClInclude Include="NPC.h" />
     <ClInclude Include="Player.h" />
     <ClInclude Include="Prototype.h" />
-    <ClInclude Include="Proxy_world.h" />
     <ClInclude Include="Publisher.h" />
     <ClInclude Include="Saver.h" />
     <ClInclude Include="Saver_decorator.h" />
@@ -195,7 +191,6 @@
     <ClCompile Include="Ability_creator.cpp" />
     <ClCompile Include="Ability_visitor.cpp" />
     <ClCompile Include="Abstract_factory.cpp" />
-    <ClCompile Include="Adapter.cpp" />
     <ClCompile Include="Background_generator.cpp" />
     <ClCompile Include="Behaviour.cpp" />
     <ClCompile Include="Behaviours.cpp" />
@@ -206,11 +201,9 @@
     <ClCompile Include="Compound_object.cpp" />
     <ClCompile Include="Concrete_factories.cpp" />
     <ClCompile Include="Different_ability_creators.cpp" />
-    <ClCompile Include="Difficulty.cpp" />
     <ClCompile Include="Environmental_object.cpp" />
     <ClCompile Include="Environment.cpp" />
     <ClCompile Include="Four_classes.cpp" />
-    <ClCompile Include="Global_ability.cpp" />
     <ClCompile Include="Iterable.cpp" />
     <ClCompile Include="Iterator.cpp" />
     <ClCompile Include="Loader.cpp" />
@@ -228,7 +221,6 @@
     <ClCompile Include="NPC.cpp" />
     <ClCompile Include="Player.cpp" />
     <ClCompile Include="Prototype.cpp" />
-    <ClCompile Include="Proxy_world.cpp" />
     <ClCompile Include="Publisher.cpp" />
     <ClCompile Include="Saver.cpp" />
     <ClCompile Include="Saver_decorator.cpp" />

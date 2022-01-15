@@ -42,19 +42,10 @@
     <ClInclude Include="Class_ability.h">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
-    <ClInclude Include="Proxy_world.h">
-      <Filter>Файлы заголовков</Filter>
-    </ClInclude>
     <ClInclude Include="Saver.h">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
     <ClInclude Include="Tester.h">
-      <Filter>Файлы заголовков</Filter>
-    </ClInclude>
-    <ClInclude Include="Adapter.h">
-      <Filter>Файлы заголовков</Filter>
-    </ClInclude>
-    <ClInclude Include="Global_ability.h">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
     <ClInclude Include="Primitive_object.h">
@@ -118,9 +109,6 @@
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
     <ClInclude Include="NPC_pool.h">
-      <Filter>Файлы заголовков</Filter>
-    </ClInclude>
-    <ClInclude Include="Difficulty.h">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
     <ClInclude Include="Builder.h">
@@ -194,9 +182,6 @@
     <ClCompile Include="Class_ability.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
-    <ClCompile Include="Proxy_world.cpp">
-      <Filter>Исходные файлы</Filter>
-    </ClCompile>
     <ClCompile Include="Saver.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
@@ -204,12 +189,6 @@
       <Filter>Исходные файлы</Filter>
     </ClCompile>
     <ClCompile Include="Tester.cpp">
-      <Filter>Исходные файлы</Filter>
-    </ClCompile>
-    <ClCompile Include="Adapter.cpp">
-      <Filter>Исходные файлы</Filter>
-    </ClCompile>
-    <ClCompile Include="Global_ability.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
     <ClCompile Include="Primitive_object.cpp">
@@ -273,9 +252,6 @@
       <Filter>Исходные файлы</Filter>
     </ClCompile>
     <ClCompile Include="NPC_pool.cpp">
-      <Filter>Исходные файлы</Filter>
-    </ClCompile>
-    <ClCompile Include="Difficulty.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
     <ClCompile Include="Builder.cpp">
