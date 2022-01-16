@@ -4,5 +4,5 @@
 class NPC : public Character
 {
 public:
-	NPC(std::string);
+	NPC(std::string, int);
 };

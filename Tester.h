@@ -33,5 +33,8 @@ public:
 	void work_with_map();
 	void edit_map(Map*);
 	void work_with_map_env(Map*);
+	Unique_state_env_obj* create_env_obj();
+	void choose_class(Player*);
+	void add_abilities(Player*);
 };
 

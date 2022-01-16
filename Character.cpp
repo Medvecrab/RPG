@@ -21,6 +21,11 @@ void Character::set_name(std::string new_name)
 	name = new_name;
 }
 
+void Character::cast_ability(Character* target)
+{
+	selected_ability->cast(target);
+}
+
 int Character::get_health()
 {
 	return health;

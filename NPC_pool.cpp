@@ -4,7 +4,7 @@ NPC_pool::NPC_pool(int amount)
 {
 	for (int i = 0; i < amount; i++)
 	{
-		NPC_list.push_back(new NPC("npc" + std::to_string(i)));
+		NPC_list.push_back(new NPC("npc" + std::to_string(i), rand() % 50 + 50));
 		is_free.push_back(true);
 	}
 }

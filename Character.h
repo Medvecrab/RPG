@@ -11,8 +11,9 @@ protected:
 	std::string name;
 	int health;
 	int resource;
-	Class* game_class;
 public:
+	Class* game_class;
+	Class_ability* selected_ability = nullptr;
 	Abstract_factory* factory;
 	State* state;
 	float x, y;
@@ -29,6 +30,7 @@ public:
 	void interact(Character*);
 	std::string get_name();
 	void set_name(std::string);
+	void cast_ability(Character*);
 };
 
  
