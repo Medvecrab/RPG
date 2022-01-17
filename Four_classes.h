@@ -4,7 +4,6 @@
 class Physical_Melee : public Physical
 {
 public:
-	const float preferred_range = 1;
 	void use_ability(Character*, int) override;
 	Physical_Melee();
 };
@@ -12,7 +11,6 @@ public:
 class Physical_Ranged : public Physical
 {
 public:
-	const float preferred_range = 10;
 	void use_ability(Character*, int) override;
 	Physical_Ranged();
 };
@@ -20,7 +18,6 @@ public:
 class Magical_Melee : public Magical
 {
 public:
-	const float preferred_range = 1;
 	void use_ability(Character*, int) override;
 	Magical_Melee();
 };
@@ -28,7 +25,6 @@ public:
 class Magical_Ranged : public Magical
 {
 public:
-	const float preferred_range = 10;
 	void use_ability(Character*, int) override;
 	Magical_Ranged();
 };

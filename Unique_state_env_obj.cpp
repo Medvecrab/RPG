@@ -5,6 +5,7 @@ Unique_state_env_obj::Unique_state_env_obj(std::string new_name, int new_health,
 	name = new_name;
 	health = new_health;
 	coordinates = std::make_pair(x, y);
+	behaviour = new Active(); //по умолчанию все объекты активные
 }
 
 void Unique_state_env_obj::set_env_obj(Environmental_object* new_env_obj)

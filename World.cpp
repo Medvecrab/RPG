@@ -7,6 +7,7 @@ World::World(std::string new_name)
 	this->name = new_name;
 	this->current_map = new Map("nomap");
 	this->current_player = new Player("noplayer");
+	this->current_map->env = new Environment(new NPC_pool(10));
 }
 
 World::~World()

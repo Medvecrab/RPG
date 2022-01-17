@@ -13,9 +13,18 @@ Environment* Map::get_env()
 void Map::set_name(std::string input_name)
 {
 	this->name = input_name;
+	this->height = 100;
+	this->width = 100;
+	this->env = new Environment(new NPC_pool(10));
 }
 
-Map::Map() {}
+Map::Map() 
+{
+	this->name = "Карта";
+	this->height = 100;
+	this->width = 100;
+	this->env = new Environment(new NPC_pool(10));
+}
 
 Map::Map(std::string input_name) 
 {

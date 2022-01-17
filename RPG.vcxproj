@@ -156,8 +156,6 @@
     <ClInclude Include="Environmental_object.h" />
     <ClInclude Include="Environment.h" />
     <ClInclude Include="Four_classes.h" />
-    <ClInclude Include="Iterable.h" />
-    <ClInclude Include="Iterator.h" />
     <ClInclude Include="Loader.h" />
     <ClInclude Include="Map_history.h" />
     <ClInclude Include="Map_snapshot.h" />
@@ -182,7 +180,6 @@
     <ClInclude Include="Subscriber.h" />
     <ClInclude Include="Tester.h" />
     <ClInclude Include="Unique_state_env_obj.h" />
-    <ClInclude Include="Vector_iterator.h" />
     <ClInclude Include="Voronoi_diagramm.h" />
     <ClInclude Include="World.h" />
   </ItemGroup>
@@ -204,8 +201,6 @@
     <ClCompile Include="Environmental_object.cpp" />
     <ClCompile Include="Environment.cpp" />
     <ClCompile Include="Four_classes.cpp" />
-    <ClCompile Include="Iterable.cpp" />
-    <ClCompile Include="Iterator.cpp" />
     <ClCompile Include="Loader.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="Map_history.cpp" />
@@ -231,7 +226,6 @@
     <ClCompile Include="Subscriber.cpp" />
     <ClCompile Include="Tester.cpp" />
     <ClCompile Include="Unique_state_env_obj.cpp" />
-    <ClCompile Include="Vector_iterator.cpp" />
     <ClCompile Include="Voronoi_diagramm.cpp" />
     <ClCompile Include="World.cpp" />
   </ItemGroup>

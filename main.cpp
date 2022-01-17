@@ -2,6 +2,7 @@
 
 int main()
 {
+	srand(time(0));
 	setlocale(LC_ALL, "Russian");
 	Tester* test = new Tester();
 	test->main_menu();

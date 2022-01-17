@@ -8,6 +8,7 @@ void Physical_Melee::use_ability(Character* target, int i)
 
 Physical_Melee::Physical_Melee()
 {
+	preferred_range = 10;
 	desc = "Физический рукопашный класс";
 }
 
@@ -18,6 +19,7 @@ void Physical_Ranged::use_ability(Character* target, int i)
 
 Physical_Ranged::Physical_Ranged()
 {
+	preferred_range = 35;
 	desc = "Физический дальнобойный класс";
 }
 
@@ -28,6 +30,7 @@ void Magical_Melee::use_ability(Character* target, int i)
 
 Magical_Melee::Magical_Melee()
 {
+	preferred_range = 10;
 	desc = "Магический рукопашный класс";
 }
 
@@ -39,5 +42,6 @@ void Magical_Ranged::use_ability(Character* target, int i)
 
 Magical_Ranged::Magical_Ranged()
 {
+	preferred_range = 35;
 	desc = "Магический дальнобойный класс";
 }

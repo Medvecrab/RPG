@@ -26,6 +26,10 @@ class Tester
 {
 public:
 	void play(); //"потестировать" "игру"
+	void move_player(Player*);
+	void choose_target(Class_ability*);
+	void choose_ability();
+	void use_object();
 	void main_menu(); //начало "создания игры", "главное меню"
 	void work_with_player(); //работа с персонажем игрока
 	Player* create_player();

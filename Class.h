@@ -11,7 +11,7 @@ class Class : public Subscriber
 protected:	
 	std::string desc;
 public:
-	const float preferred_range = 1;
+	float preferred_range = 1;
 	std::vector <Class_ability*> list_of_abilities;
 	Class();
 	Class(std::string);
