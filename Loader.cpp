@@ -1,6 +1,6 @@
 #include "Loader.h"
 
-std::string Loader::generate_background() //TODO: будем возвращать название файла, который хотим загрузить
+std::string Loader::generate_background() //TODO: Р±СѓРґРµРј РІРѕР·РІСЂР°С‰Р°С‚СЊ РЅР°Р·РІР°РЅРёРµ С„Р°Р№Р»Р°, РєРѕС‚РѕСЂС‹Р№ С…РѕС‚РёРј Р·Р°РіСЂСѓР·РёС‚СЊ
 {
 	return "Loaded.png";
 }

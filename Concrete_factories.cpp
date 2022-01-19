@@ -1,27 +1,27 @@
 #include "Concrete_factories.h"
 
-//TODO: сделать кострукторы классов с передачей туда описания, чтобы делать типо разные классы.
+//TODO: СЃРґРµР»Р°С‚СЊ РєРѕСЃС‚СЂСѓРєС‚РѕСЂС‹ РєР»Р°СЃСЃРѕРІ СЃ РїРµСЂРµРґР°С‡РµР№ С‚СѓРґР° РѕРїРёСЃР°РЅРёСЏ, С‡С‚РѕР±С‹ РґРµР»Р°С‚СЊ С‚РёРїРѕ СЂР°Р·РЅС‹Рµ РєР»Р°СЃСЃС‹.
 
 Class* Melee_factory::create_physical()
 {
-	std::cout << "Создан физический рукопашный класс" << std::endl;
+	std::cout << "РЎРѕР·РґР°РЅ С„РёР·РёС‡РµСЃРєРёР№ СЂСѓРєРѕРїР°С€РЅС‹Р№ РєР»Р°СЃСЃ" << std::endl;
 	return new Physical_Melee();
 }
 
 Class* Melee_factory::create_magical()
 {
-	std::cout << "Создан магический рукопашный класс" << std::endl;
+	std::cout << "РЎРѕР·РґР°РЅ РјР°РіРёС‡РµСЃРєРёР№ СЂСѓРєРѕРїР°С€РЅС‹Р№ РєР»Р°СЃСЃ" << std::endl;
 	return new Magical_Melee();
 }
 
 Class* Ranged_factory::create_physical()
 {
-	std::cout << "Создан физический дальнобойный класс" << std::endl;
+	std::cout << "РЎРѕР·РґР°РЅ С„РёР·РёС‡РµСЃРєРёР№ РґР°Р»СЊРЅРѕР±РѕР№РЅС‹Р№ РєР»Р°СЃСЃ" << std::endl;
 	return new Physical_Ranged();
 }
 
 Class* Ranged_factory::create_magical()
 {
-	std::cout << "Создан магический дальнобойный класс" << std::endl;
+	std::cout << "РЎРѕР·РґР°РЅ РјР°РіРёС‡РµСЃРєРёР№ РґР°Р»СЊРЅРѕР±РѕР№РЅС‹Р№ РєР»Р°СЃСЃ" << std::endl;
 	return new Magical_Ranged();
 }

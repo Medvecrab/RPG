@@ -4,7 +4,7 @@ Player* Player_director::make_warrior()
 {
 	builder->build_health(200);
 	builder->build_resource(0);
-	builder->build_name("Ğûöàğü Áäûù-à-ëîò");
+	builder->build_name("â€“Ñ‹Ñ†Ğ°Ñ€ÑŒ Ğ…Ğ´Ñ‹Ñ‰-Ğ°-Ğ»Ğ¾Ñ‚");
 	builder->build_karma_points(10);
 	//builder->build_class(1,1);
 	return builder->get_player();
@@ -14,7 +14,7 @@ Player* Player_director::make_mage()
 {
 	builder->build_health(50);
 	builder->build_resource(200);
-	builder->build_name("Âîëøåáíèê Ìığ Ëèíã");
+	builder->build_name("Â¬Ğ¾Ğ»ÑˆĞµĞ±Ğ½Ğ¸Ğº Ñ›ÑÑ€ Ğ‹Ğ¸Ğ½Ğ³");
 	builder->build_karma_points(-5);
 	//builder->build_class(2,2);
 	return builder->get_player();
@@ -22,44 +22,44 @@ Player* Player_director::make_mage()
 
 Player* Player_director::make_custom()
 {
-	std::cout << "Õîòèòå óñòàíîâèòü çäîğîâüå ïåğñîíàæà? y/n" << std::endl;
+	std::cout << "â€™Ğ¾Ñ‚Ğ¸Ñ‚Ğµ ÑƒÑÑ‚Ğ°Ğ½Ğ¾Ğ²Ğ¸Ñ‚ÑŒ Ğ·Ğ´Ğ¾Ñ€Ğ¾Ğ²ÑŒĞµ Ğ¿ĞµÑ€ÑĞ¾Ğ½Ğ°Ğ¶Ğ°? y/n" << std::endl;
 	char ans;
 	std::cin >> ans;
 	if (ans == 'y')
 	{
-		std::cout << "Ââåäèòå ìàêñèìàëüíîå çäîğîâüå ïåğñîíàæà " << std::endl;
+		std::cout << "Â¬Ğ²ĞµĞ´Ğ¸Ñ‚Ğµ Ğ¼Ğ°ĞºÑĞ¸Ğ¼Ğ°Ğ»ÑŒĞ½Ğ¾Ğµ Ğ·Ğ´Ğ¾Ñ€Ğ¾Ğ²ÑŒĞµ Ğ¿ĞµÑ€ÑĞ¾Ğ½Ğ°Ğ¶Ğ° " << std::endl;
 		int health;
 		std::cin >> health;
 		builder->build_health(health);
 	}
-	std::cout << "Õîòèòå óñòàíîâèòü ğåñóğñ ïåğñîíàæà? y/n" << std::endl;
+	std::cout << "â€™Ğ¾Ñ‚Ğ¸Ñ‚Ğµ ÑƒÑÑ‚Ğ°Ğ½Ğ¾Ğ²Ğ¸Ñ‚ÑŒ Ñ€ĞµÑÑƒÑ€Ñ Ğ¿ĞµÑ€ÑĞ¾Ğ½Ğ°Ğ¶Ğ°? y/n" << std::endl;
 	std::cin >> ans;
 	if (ans == 'y')
 	{
-		std::cout << "Ââåäèòå ìàêñèìàëüíîå çíà÷åíèå ğåñóğñà ïåğñîíàæà " << std::endl;
+		std::cout << "Â¬Ğ²ĞµĞ´Ğ¸Ñ‚Ğµ Ğ¼Ğ°ĞºÑĞ¸Ğ¼Ğ°Ğ»ÑŒĞ½Ğ¾Ğµ Ğ·Ğ½Ğ°Ñ‡ĞµĞ½Ğ¸Ğµ Ñ€ĞµÑÑƒÑ€ÑĞ° Ğ¿ĞµÑ€ÑĞ¾Ğ½Ğ°Ğ¶Ğ° " << std::endl;
 		int resource;
 		std::cin >> resource;
 		builder->build_resource(resource);
 	}
-	std::cout << "Õîòèòå óñòàíîâèòü èìÿ ïåğñîíàæà? y/n" << std::endl;
+	std::cout << "â€™Ğ¾Ñ‚Ğ¸Ñ‚Ğµ ÑƒÑÑ‚Ğ°Ğ½Ğ¾Ğ²Ğ¸Ñ‚ÑŒ Ğ¸Ğ¼Â¤ Ğ¿ĞµÑ€ÑĞ¾Ğ½Ğ°Ğ¶Ğ°? y/n" << std::endl;
 	std::cin >> ans;
 	if (ans == 'y')
 	{
-		std::cout << "Ââåäèòå èìÿ ïåğñîíàæà " << std::endl;
+		std::cout << "Â¬Ğ²ĞµĞ´Ğ¸Ñ‚Ğµ Ğ¸Ğ¼Â¤ Ğ¿ĞµÑ€ÑĞ¾Ğ½Ğ°Ğ¶Ğ° " << std::endl;
 		std::string name;
 		std::cin >> name;
 		builder->build_name(name);
 	}
-	std::cout << "Õîòèòå óñòàíîâèòü êàğìó ïåğñîíàæà? y/n" << std::endl;
+	std::cout << "â€™Ğ¾Ñ‚Ğ¸Ñ‚Ğµ ÑƒÑÑ‚Ğ°Ğ½Ğ¾Ğ²Ğ¸Ñ‚ÑŒ ĞºĞ°Ñ€Ğ¼Ñƒ Ğ¿ĞµÑ€ÑĞ¾Ğ½Ğ°Ğ¶Ğ°? y/n" << std::endl;
 	std::cin >> ans;
 	if (ans == 'y')
 	{
-		std::cout << "Ââåäèòå î÷êè êàğìû ïåğñîíàæà " << std::endl;
+		std::cout << "Â¬Ğ²ĞµĞ´Ğ¸Ñ‚Ğµ Ğ¾Ñ‡ĞºĞ¸ ĞºĞ°Ñ€Ğ¼Ñ‹ Ğ¿ĞµÑ€ÑĞ¾Ğ½Ğ°Ğ¶Ğ° " << std::endl;
 		int karma;
 		std::cin >> karma;
 		builder->build_karma_points(karma);
 	}
-	/*std::cout << "Õîòèòå óñòàíîâèòü êëàññ ïåğñîíàæà? y/n" << std::endl;
+	/*std::cout << "â€™Ğ¾Ñ‚Ğ¸Ñ‚Ğµ ÑƒÑÑ‚Ğ°Ğ½Ğ¾Ğ²Ğ¸Ñ‚ÑŒ ĞºĞ»Ğ°ÑÑ Ğ¿ĞµÑ€ÑĞ¾Ğ½Ğ°Ğ¶Ğ°? y/n" << std::endl;
 	std::cin >> ans;
 	if (ans == 'y')
 	{

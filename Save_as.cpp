@@ -1,6 +1,6 @@
 #include "Save_as.h"
 
-//TODO: хотя бы файлики открывать
+//TODO: С…РѕС‚СЏ Р±С‹ С„Р°Р№Р»РёРєРё РѕС‚РєСЂС‹РІР°С‚СЊ
 
 void Save_as_txt::save_world(std::string filename)
 {

@@ -20,7 +20,7 @@ void Map::set_name(std::string input_name)
 
 Map::Map() 
 {
-	this->name = "Êàðòà";
+	this->name = "ÐšÐ°Ñ€Ñ‚Ð°";
 	this->height = 100;
 	this->width = 100;
 	this->env = new Environment(new NPC_pool(10));

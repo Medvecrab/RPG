@@ -2,7 +2,7 @@
 
 void Tester::play()
 {
-	World* current_world = World::get_instance("Дивный новый мир");
+	World* current_world = World::get_instance("Р”РёРІРЅС‹Р№ РЅРѕРІС‹Р№ РјРёСЂ");
 	Player* current_player = current_world->get_player();
 	Map* current_map = current_world->get_map();
 	Environment* current_environment = current_map->get_env();
@@ -13,21 +13,21 @@ void Tester::play()
 	do
 	{
 		system("cls");
-		std::cout << "Вы видите следующих персонажей: \n";
+		std::cout << "Р’С‹ РІРёРґРёС‚Рµ СЃР»РµРґСѓСЋС‰РёС… РїРµСЂСЃРѕРЅР°Р¶РµР№: \n";
 		for (int i = 0; i < current_environment->assigned_NPCs.size(); i++)
 		{
-			std::cout << current_environment->assigned_NPCs[i]->get_name() << ", здоровье " << current_environment->assigned_NPCs[i]->get_health()
-				<< ", координаты :" << current_environment->assigned_NPCs[i]->x << "," << current_environment->assigned_NPCs[i]->y << ";\n";
+			std::cout << current_environment->assigned_NPCs[i]->get_name() << ", Р·РґРѕСЂРѕРІСЊРµ " << current_environment->assigned_NPCs[i]->get_health()
+				<< ", РєРѕРѕСЂРґРёРЅР°С‚С‹ :" << current_environment->assigned_NPCs[i]->x << "," << current_environment->assigned_NPCs[i]->y << ";\n";
 		}
-		std::cout << "Вы также видите следующие объекты: \n";
+		std::cout << "Р’С‹ С‚Р°РєР¶Рµ РІРёРґРёС‚Рµ СЃР»РµРґСѓСЋС‰РёРµ РѕР±СЉРµРєС‚С‹: \n";
 		for (int i = 0; i < current_environment->env_objects.size(); i++)
 		{
-			std::cout << current_environment->env_objects[i]->name << ", здоровье " << current_environment->env_objects[i]->health
-				<< ", координаты :" << current_environment->env_objects[i]->coordinates.first << "," << current_environment->env_objects[i]->coordinates.second << ";\n";
+			std::cout << current_environment->env_objects[i]->name << ", Р·РґРѕСЂРѕРІСЊРµ " << current_environment->env_objects[i]->health
+				<< ", РєРѕРѕСЂРґРёРЅР°С‚С‹ :" << current_environment->env_objects[i]->coordinates.first << "," << current_environment->env_objects[i]->coordinates.second << ";\n";
 		}
-		std::cout << "Ваши координаты: " << current_player->x << "," << current_player->y << "\n";
-		std::cout << "Ваши действия: \n" << "1. Двигаться \n" << "2. Использовать способность \n" 
-			<< "3. Использовать объект \n" << "4. Закончить тест и выйти в главное меню \n";
+		std::cout << "Р’Р°С€Рё РєРѕРѕСЂРґРёРЅР°С‚С‹: " << current_player->x << "," << current_player->y << "\n";
+		std::cout << "Р’Р°С€Рё РґРµР№СЃС‚РІРёСЏ: \n" << "1. Р”РІРёРіР°С‚СЊСЃСЏ \n" << "2. РСЃРїРѕР»СЊР·РѕРІР°С‚СЊ СЃРїРѕСЃРѕР±РЅРѕСЃС‚СЊ \n" 
+			<< "3. РСЃРїРѕР»СЊР·РѕРІР°С‚СЊ РѕР±СЉРµРєС‚ \n" << "4. Р—Р°РєРѕРЅС‡РёС‚СЊ С‚РµСЃС‚ Рё РІС‹Р№С‚Рё РІ РіР»Р°РІРЅРѕРµ РјРµРЅСЋ \n";
 		std::cin >> choice;
 		switch (choice)
 		{
@@ -37,13 +37,13 @@ void Tester::play()
 		case 2:
 			choose_ability();
 			std::cin.ignore();
-			std::cout << "Нажмите Enter чтобы продолжить";
+			std::cout << "РќР°Р¶РјРёС‚Рµ Enter С‡С‚РѕР±С‹ РїСЂРѕРґРѕР»Р¶РёС‚СЊ";
 			std::cin.ignore();
 			break;
 		case 3:
 			use_object();
 			std::cin.ignore();
-			std::cout << "Нажмите Enter чтобы продолжить";
+			std::cout << "РќР°Р¶РјРёС‚Рµ Enter С‡С‚РѕР±С‹ РїСЂРѕРґРѕР»Р¶РёС‚СЊ";
 			std::cin.ignore();
 			break;
 		case 4:
@@ -61,17 +61,17 @@ void Tester::move_player(Player* current_player)
 	int y;
 	do
 	{
-		std::cout << "1. Двинуться по оси X \n" << "2. Двинуться по оси Y \n" << "3. Выйти из режима движения \n";
+		std::cout << "1. Р”РІРёРЅСѓС‚СЊСЃСЏ РїРѕ РѕСЃРё X \n" << "2. Р”РІРёРЅСѓС‚СЊСЃСЏ РїРѕ РѕСЃРё Y \n" << "3. Р’С‹Р№С‚Рё РёР· СЂРµР¶РёРјР° РґРІРёР¶РµРЅРёСЏ \n";
 		std::cin >> choice;
 		switch (choice)
 		{
 		case 1:
-			std::cout << "Введите на какое расстояние вы хотите сдвинуться вдоль оси X ";
+			std::cout << "Р’РІРµРґРёС‚Рµ РЅР° РєР°РєРѕРµ СЂР°СЃСЃС‚РѕСЏРЅРёРµ РІС‹ С…РѕС‚РёС‚Рµ СЃРґРІРёРЅСѓС‚СЊСЃСЏ РІРґРѕР»СЊ РѕСЃРё X ";
 			std::cin >> x;
 			current_player->x += x;
 			break;
 		case 2:
-			std::cout << "Введите на какое расстояние вы хотите сдвинуться вдоль оси y ";
+			std::cout << "Р’РІРµРґРёС‚Рµ РЅР° РєР°РєРѕРµ СЂР°СЃСЃС‚РѕСЏРЅРёРµ РІС‹ С…РѕС‚РёС‚Рµ СЃРґРІРёРЅСѓС‚СЊСЃСЏ РІРґРѕР»СЊ РѕСЃРё y ";
 			std::cin >> y;
 			current_player->y += y;
 			break;
@@ -85,10 +85,10 @@ void Tester::move_player(Player* current_player)
 
 void Tester::choose_ability()
 {
-	World* current_world = World::get_instance("Дивный новый мир");
+	World* current_world = World::get_instance("Р”РёРІРЅС‹Р№ РЅРѕРІС‹Р№ РјРёСЂ");
 	Player* current_player = current_world->get_player();
 	int choice;
-	std::cout << "Выберите номер способности \n";
+	std::cout << "Р’С‹Р±РµСЂРёС‚Рµ РЅРѕРјРµСЂ СЃРїРѕСЃРѕР±РЅРѕСЃС‚Рё \n";
 	for (int i = 0; i < current_player->game_class->list_of_abilities.size(); i++)
 	{
 		std::cout << i+1 << " " << current_player->game_class->list_of_abilities[i]->get_description() << "\n";
@@ -102,24 +102,24 @@ void Tester::choose_ability()
 
 void Tester::choose_target(Class_ability* ability)
 {
-	World* current_world = World::get_instance("Дивный новый мир");
+	World* current_world = World::get_instance("Р”РёРІРЅС‹Р№ РЅРѕРІС‹Р№ РјРёСЂ");
 	Player* current_player = current_world->get_player();
 	Map* current_map = current_world->get_map();
 	Environment* current_environment = current_map->get_env();
 	int choice;
 	int counter = 0;
-	std::cout << "Выберите цель из предложенных: \n";
+	std::cout << "Р’С‹Р±РµСЂРёС‚Рµ С†РµР»СЊ РёР· РїСЂРµРґР»РѕР¶РµРЅРЅС‹С…: \n";
 	for (int i = 0; i < current_environment->assigned_NPCs.size(); i++)
 	{
-		std::cout << ++counter << ". " << current_environment->assigned_NPCs[i]->get_name() << ", здоровье " << current_environment->assigned_NPCs[i]->get_health()
-			<< ", координаты :" << current_environment->assigned_NPCs[i]->x << "," << current_environment->assigned_NPCs[i]->y << ";\n";
+		std::cout << ++counter << ". " << current_environment->assigned_NPCs[i]->get_name() << ", Р·РґРѕСЂРѕРІСЊРµ " << current_environment->assigned_NPCs[i]->get_health()
+			<< ", РєРѕРѕСЂРґРёРЅР°С‚С‹ :" << current_environment->assigned_NPCs[i]->x << "," << current_environment->assigned_NPCs[i]->y << ";\n";
 	}
-	//выводятся только персонажи, потому что только на них пока можно использовать способности
+	//РІС‹РІРѕРґСЏС‚СЃСЏ С‚РѕР»СЊРєРѕ РїРµСЂСЃРѕРЅР°Р¶Рё, РїРѕС‚РѕРјСѓ С‡С‚Рѕ С‚РѕР»СЊРєРѕ РЅР° РЅРёС… РїРѕРєР° РјРѕР¶РЅРѕ РёСЃРїРѕР»СЊР·РѕРІР°С‚СЊ СЃРїРѕСЃРѕР±РЅРѕСЃС‚Рё
 	std::cin >> choice;
-	if (choice > 0 && choice <= current_environment->assigned_NPCs.size()) //выбрали правильную цель
+	if (choice > 0 && choice <= current_environment->assigned_NPCs.size()) //РІС‹Р±СЂР°Р»Рё РїСЂР°РІРёР»СЊРЅСѓСЋ С†РµР»СЊ
 	{
 		Character* target = current_environment->assigned_NPCs[choice - 1];
-		//теперь проверим, дотянемся ли до неё способностью
+		//С‚РµРїРµСЂСЊ РїСЂРѕРІРµСЂРёРј, РґРѕС‚СЏРЅРµРјСЃСЏ Р»Рё РґРѕ РЅРµС‘ СЃРїРѕСЃРѕР±РЅРѕСЃС‚СЊСЋ
 		if (sqrt((current_player->x - target->x) * (current_player->x - target->x) + (current_player->y - target->y) * (current_player->y - target->y))
 				<= current_player->game_class->preferred_range)
 		{
@@ -127,52 +127,52 @@ void Tester::choose_target(Class_ability* ability)
 		}
 		else
 		{
-			std::cout << "Цель слишком далеко! Подойдите на расстояние не менее " << current_player->game_class->preferred_range << "\n";
+			std::cout << "Р¦РµР»СЊ СЃР»РёС€РєРѕРј РґР°Р»РµРєРѕ! РџРѕРґРѕР№РґРёС‚Рµ РЅР° СЂР°СЃСЃС‚РѕСЏРЅРёРµ РЅРµ РјРµРЅРµРµ " << current_player->game_class->preferred_range << "\n";
 		}
 	}
 }
 
 void Tester::use_object()
 {
-	World* current_world = World::get_instance("Дивный новый мир");
+	World* current_world = World::get_instance("Р”РёРІРЅС‹Р№ РЅРѕРІС‹Р№ РјРёСЂ");
 	Player* current_player = current_world->get_player();
 	Map* current_map = current_world->get_map();
 	Environment* current_environment = current_map->get_env();
 	int choice;
 	int counter = 0;
-	std::cout << "Ваши координаты: " << current_player->x << "," << current_player->y << "\n";
-	std::cout << "Вы видите следующие объекты, выберите один из них для взаимодействия: \n";
+	std::cout << "Р’Р°С€Рё РєРѕРѕСЂРґРёРЅР°С‚С‹: " << current_player->x << "," << current_player->y << "\n";
+	std::cout << "Р’С‹ РІРёРґРёС‚Рµ СЃР»РµРґСѓСЋС‰РёРµ РѕР±СЉРµРєС‚С‹, РІС‹Р±РµСЂРёС‚Рµ РѕРґРёРЅ РёР· РЅРёС… РґР»СЏ РІР·Р°РёРјРѕРґРµР№СЃС‚РІРёСЏ: \n";
 	for (int i = 0; i < current_environment->env_objects.size(); i++)
 	{
-		std::cout << ++counter << ". " << current_environment->env_objects[i]->name << ", здоровье " << current_environment->env_objects[i]->health
-			<< ", координаты :" << current_environment->env_objects[i]->coordinates.first << "," << current_environment->env_objects[i]->coordinates.second << ";\n";
+		std::cout << ++counter << ". " << current_environment->env_objects[i]->name << ", Р·РґРѕСЂРѕРІСЊРµ " << current_environment->env_objects[i]->health
+			<< ", РєРѕРѕСЂРґРёРЅР°С‚С‹ :" << current_environment->env_objects[i]->coordinates.first << "," << current_environment->env_objects[i]->coordinates.second << ";\n";
 	}
 	std::cin >> choice;
-	if (choice > 0 && choice <= current_environment->assigned_NPCs.size()) //выбрали правильную цель
+	if (choice > 0 && choice <= current_environment->assigned_NPCs.size()) //РІС‹Р±СЂР°Р»Рё РїСЂР°РІРёР»СЊРЅСѓСЋ С†РµР»СЊ
 	{
 		Unique_state_env_obj* target = current_environment->env_objects[choice - 1];
-		//теперь проверим, дотянемся ли до неё способностью
+		//С‚РµРїРµСЂСЊ РїСЂРѕРІРµСЂРёРј, РґРѕС‚СЏРЅРµРјСЃСЏ Р»Рё РґРѕ РЅРµС‘ СЃРїРѕСЃРѕР±РЅРѕСЃС‚СЊСЋ
 		if (sqrt((current_player->x - target->coordinates.first) * (current_player->x - target->coordinates.first) +
-			(current_player->y - target->coordinates.second) * (current_player->y - target->coordinates.second)) <= 10) //пусть пока все объекты активируются на расстоянии 10
+			(current_player->y - target->coordinates.second) * (current_player->y - target->coordinates.second)) <= 10) //РїСѓСЃС‚СЊ РїРѕРєР° РІСЃРµ РѕР±СЉРµРєС‚С‹ Р°РєС‚РёРІРёСЂСѓСЋС‚СЃСЏ РЅР° СЂР°СЃСЃС‚РѕСЏРЅРёРё 10
 		{
 			target->react();
 		}
 		else
 		{
-			std::cout << "Объект слишком далеко! Подойдите на расстояние не менее 10\n";
+			std::cout << "РћР±СЉРµРєС‚ СЃР»РёС€РєРѕРј РґР°Р»РµРєРѕ! РџРѕРґРѕР№РґРёС‚Рµ РЅР° СЂР°СЃСЃС‚РѕСЏРЅРёРµ РЅРµ РјРµРЅРµРµ 10\n";
 		}
 	}
 }
 
 void Tester::main_menu()
 {
-	World::get_instance("Дивный новый мир"); //создали новый мир, которым будем везде пользоваться
+	World::get_instance("Р”РёРІРЅС‹Р№ РЅРѕРІС‹Р№ РјРёСЂ"); //СЃРѕР·РґР°Р»Рё РЅРѕРІС‹Р№ РјРёСЂ, РєРѕС‚РѕСЂС‹Рј Р±СѓРґРµРј РІРµР·РґРµ РїРѕР»СЊР·РѕРІР°С‚СЊСЃСЏ
 	int choice;
 	do
 	{
 		system("cls");
-		std::cout << "Выберите один из пунктов меню: \n" << "1. Создание/редактирование персонажа игрока \n" << "2. Создание/редактирование карты \n"
-			<< "3. Протестировать полученную игру\n" << "4. Выйти из программы \n";
+		std::cout << "Р’С‹Р±РµСЂРёС‚Рµ РѕРґРёРЅ РёР· РїСѓРЅРєС‚РѕРІ РјРµРЅСЋ: \n" << "1. РЎРѕР·РґР°РЅРёРµ/СЂРµРґР°РєС‚РёСЂРѕРІР°РЅРёРµ РїРµСЂСЃРѕРЅР°Р¶Р° РёРіСЂРѕРєР° \n" << "2. РЎРѕР·РґР°РЅРёРµ/СЂРµРґР°РєС‚РёСЂРѕРІР°РЅРёРµ РєР°СЂС‚С‹ \n"
+			<< "3. РџСЂРѕС‚РµСЃС‚РёСЂРѕРІР°С‚СЊ РїРѕР»СѓС‡РµРЅРЅСѓСЋ РёРіСЂСѓ\n" << "4. Р’С‹Р№С‚Рё РёР· РїСЂРѕРіСЂР°РјРјС‹ \n";
 		std::cin >> choice;
 		switch (choice)
 		{
@@ -195,24 +195,24 @@ void Tester::main_menu()
 
 void Tester::work_with_player()
 {
-	//сделать do while
-	World* current_world = World::get_instance("Дивный новый мир");
-	Player* current_player = current_world->get_player(); //сохранили текущего игрока
+	//СЃРґРµР»Р°С‚СЊ do while
+	World* current_world = World::get_instance("Р”РёРІРЅС‹Р№ РЅРѕРІС‹Р№ РјРёСЂ");
+	Player* current_player = current_world->get_player(); //СЃРѕС…СЂР°РЅРёР»Рё С‚РµРєСѓС‰РµРіРѕ РёРіСЂРѕРєР°
 	int choice;
 	do
 	{
 		system("cls");
-		std::cout << "Выберите один из пунктов меню: \n" << "1. Создать нового персонажа \n" << "2. Редактировать существующего персонажа \n"
-			<< "3. Работать с классом игрока \n" << "4. Добавить персонажу способностей \n" << "5. Вернуться в прошлое меню \n";
+		std::cout << "Р’С‹Р±РµСЂРёС‚Рµ РѕРґРёРЅ РёР· РїСѓРЅРєС‚РѕРІ РјРµРЅСЋ: \n" << "1. РЎРѕР·РґР°С‚СЊ РЅРѕРІРѕРіРѕ РїРµСЂСЃРѕРЅР°Р¶Р° \n" << "2. Р РµРґР°РєС‚РёСЂРѕРІР°С‚СЊ СЃСѓС‰РµСЃС‚РІСѓСЋС‰РµРіРѕ РїРµСЂСЃРѕРЅР°Р¶Р° \n"
+			<< "3. Р Р°Р±РѕС‚Р°С‚СЊ СЃ РєР»Р°СЃСЃРѕРј РёРіСЂРѕРєР° \n" << "4. Р”РѕР±Р°РІРёС‚СЊ РїРµСЂСЃРѕРЅР°Р¶Сѓ СЃРїРѕСЃРѕР±РЅРѕСЃС‚РµР№ \n" << "5. Р’РµСЂРЅСѓС‚СЊСЃСЏ РІ РїСЂРѕС€Р»РѕРµ РјРµРЅСЋ \n";
 		std::cin >> choice;
 		switch (choice)
 		{
 		case 1:
-			current_world->change_player(create_player()); //надо проверять где-нибудь, что персонаж создался
+			current_world->change_player(create_player()); //РЅР°РґРѕ РїСЂРѕРІРµСЂСЏС‚СЊ РіРґРµ-РЅРёР±СѓРґСЊ, С‡С‚Рѕ РїРµСЂСЃРѕРЅР°Р¶ СЃРѕР·РґР°Р»СЃСЏ
 			if (current_world->get_player() == nullptr)
 			{
 				Player_director* director = new Player_director();
-				current_world->change_player(director->make_warrior()); //создаём стандартного воина
+				current_world->change_player(director->make_warrior()); //СЃРѕР·РґР°С‘Рј СЃС‚Р°РЅРґР°СЂС‚РЅРѕРіРѕ РІРѕРёРЅР°
 			}
 			current_player = current_world->get_player();
 			break;
@@ -239,8 +239,8 @@ Player* Tester::create_player()
 	Player_director* director = new Player_director();
 	int choice;
 	system("cls");
-	std::cout << "Выберите один из пунктов меню: \n" << "1. Создать прегенерированного воина \n" << "2. Создать прегенерированного мага\n" 
-		<< "3. Создать своего персонажа \n" << "4. Вернуться в прошлое меню \n";
+	std::cout << "Р’С‹Р±РµСЂРёС‚Рµ РѕРґРёРЅ РёР· РїСѓРЅРєС‚РѕРІ РјРµРЅСЋ: \n" << "1. РЎРѕР·РґР°С‚СЊ РїСЂРµРіРµРЅРµСЂРёСЂРѕРІР°РЅРЅРѕРіРѕ РІРѕРёРЅР° \n" << "2. РЎРѕР·РґР°С‚СЊ РїСЂРµРіРµРЅРµСЂРёСЂРѕРІР°РЅРЅРѕРіРѕ РјР°РіР°\n" 
+		<< "3. РЎРѕР·РґР°С‚СЊ СЃРІРѕРµРіРѕ РїРµСЂСЃРѕРЅР°Р¶Р° \n" << "4. Р’РµСЂРЅСѓС‚СЊСЃСЏ РІ РїСЂРѕС€Р»РѕРµ РјРµРЅСЋ \n";
 	std::cin >> choice;
 	switch (choice)
 	{
@@ -267,28 +267,28 @@ void Tester::edit_player(Player* input_player)
 	do
 	{
 		system("cls");
-		std::cout << "Выберите один из пунктов меню: \n" << "1. Изменить здоровье персонажа \n" << "2. Изменить ресурс персонажа \n"
-			<< "3. Изменить имя персонажа \n" << "4. Изменить карму персонажа \n" << "5. Вернуться в предыдущее меню \n";
+		std::cout << "Р’С‹Р±РµСЂРёС‚Рµ РѕРґРёРЅ РёР· РїСѓРЅРєС‚РѕРІ РјРµРЅСЋ: \n" << "1. РР·РјРµРЅРёС‚СЊ Р·РґРѕСЂРѕРІСЊРµ РїРµСЂСЃРѕРЅР°Р¶Р° \n" << "2. РР·РјРµРЅРёС‚СЊ СЂРµСЃСѓСЂСЃ РїРµСЂСЃРѕРЅР°Р¶Р° \n"
+			<< "3. РР·РјРµРЅРёС‚СЊ РёРјСЏ РїРµСЂСЃРѕРЅР°Р¶Р° \n" << "4. РР·РјРµРЅРёС‚СЊ РєР°СЂРјСѓ РїРµСЂСЃРѕРЅР°Р¶Р° \n" << "5. Р’РµСЂРЅСѓС‚СЊСЃСЏ РІ РїСЂРµРґС‹РґСѓС‰РµРµ РјРµРЅСЋ \n";
 		std::cin >> choice;
 		switch (choice)
 		{
 		case 1:
-			std::cout << "Введите максимальное здоровье персонажа " << std::endl;
+			std::cout << "Р’РІРµРґРёС‚Рµ РјР°РєСЃРёРјР°Р»СЊРЅРѕРµ Р·РґРѕСЂРѕРІСЊРµ РїРµСЂСЃРѕРЅР°Р¶Р° " << std::endl;
 			std::cin >> health;
 			input_player->set_health(health);
 			break;
 		case 2:
-			std::cout << "Введите максимальное значение ресурса персонажа " << std::endl;
+			std::cout << "Р’РІРµРґРёС‚Рµ РјР°РєСЃРёРјР°Р»СЊРЅРѕРµ Р·РЅР°С‡РµРЅРёРµ СЂРµСЃСѓСЂСЃР° РїРµСЂСЃРѕРЅР°Р¶Р° " << std::endl;
 			std::cin >> resource;
 			input_player->set_resource(resource);
 			break;
 		case 3:
-			std::cout << "Введите имя персонажа " << std::endl;
+			std::cout << "Р’РІРµРґРёС‚Рµ РёРјСЏ РїРµСЂСЃРѕРЅР°Р¶Р° " << std::endl;
 			std::cin >> name;
 			input_player->set_name(name);
 			break;
 		case 4:
-			std::cout << "Введите очки кармы персонажа " << std::endl;
+			std::cout << "Р’РІРµРґРёС‚Рµ РѕС‡РєРё РєР°СЂРјС‹ РїРµСЂСЃРѕРЅР°Р¶Р° " << std::endl;
 			std::cin >> karma;
 			input_player->karma_points = karma;
 			break;
@@ -302,27 +302,27 @@ void Tester::edit_player(Player* input_player)
 
 void Tester::work_with_map()
 {
-	World* current_world = World::get_instance("Дивный новый мир");
-	Map* current_map = current_world->get_map(); //сохранили текущую карту
+	World* current_world = World::get_instance("Р”РёРІРЅС‹Р№ РЅРѕРІС‹Р№ РјРёСЂ");
+	Map* current_map = current_world->get_map(); //СЃРѕС…СЂР°РЅРёР»Рё С‚РµРєСѓС‰СѓСЋ РєР°СЂС‚Сѓ
 	int choice;
 	do
 	{
 		system("cls");
-		std::cout << "Выберите один из пунктов меню: \n" << "1. Создать новую карту \n" << "2. Редактировать существующую карту \n"
-			<< "3. Работать с окружением карты \n" << "4. Вернуться в прошлое меню \n";
+		std::cout << "Р’С‹Р±РµСЂРёС‚Рµ РѕРґРёРЅ РёР· РїСѓРЅРєС‚РѕРІ РјРµРЅСЋ: \n" << "1. РЎРѕР·РґР°С‚СЊ РЅРѕРІСѓСЋ РєР°СЂС‚Сѓ \n" << "2. Р РµРґР°РєС‚РёСЂРѕРІР°С‚СЊ СЃСѓС‰РµСЃС‚РІСѓСЋС‰СѓСЋ РєР°СЂС‚Сѓ \n"
+			<< "3. Р Р°Р±РѕС‚Р°С‚СЊ СЃ РѕРєСЂСѓР¶РµРЅРёРµРј РєР°СЂС‚С‹ \n" << "4. Р’РµСЂРЅСѓС‚СЊСЃСЏ РІ РїСЂРѕС€Р»РѕРµ РјРµРЅСЋ \n";
 		std::cin >> choice;
 		switch (choice)
 		{
 		case 1:
-			current_world->load_map(new Map()); //тут просто создаётся пустая карта, которую надо потом редачить
-			current_map = current_world->get_map(); //сохранили текущую карту
+			current_world->load_map(new Map()); //С‚СѓС‚ РїСЂРѕСЃС‚Рѕ СЃРѕР·РґР°С‘С‚СЃСЏ РїСѓСЃС‚Р°СЏ РєР°СЂС‚Р°, РєРѕС‚РѕСЂСѓСЋ РЅР°РґРѕ РїРѕС‚РѕРј СЂРµРґР°С‡РёС‚СЊ
+			current_map = current_world->get_map(); //СЃРѕС…СЂР°РЅРёР»Рё С‚РµРєСѓС‰СѓСЋ РєР°СЂС‚Сѓ
 			break;
 		case 2:
 			edit_map(current_map);
 			current_world->load_map(current_map);
 			break;
 		case 3:
-			//работа с окружением карты
+			//СЂР°Р±РѕС‚Р° СЃ РѕРєСЂСѓР¶РµРЅРёРµРј РєР°СЂС‚С‹
 			work_with_map_env(current_map);
 			break;
 		case 4:
@@ -342,28 +342,28 @@ void Tester::edit_map(Map* current_map)
 	do
 	{
 		system("cls");
-		std::cout << "Выберите один из пунктов меню: \n" << "1. Изменить название карты \n" << "2. Изменить высоту карты \n"
-			<< "3. Изменить ширину карты \n" << "4. Изменить генератор заднего фона и сгенерировать новый фон \n" << "5. Вернуться в прошлое меню \n";
+		std::cout << "Р’С‹Р±РµСЂРёС‚Рµ РѕРґРёРЅ РёР· РїСѓРЅРєС‚РѕРІ РјРµРЅСЋ: \n" << "1. РР·РјРµРЅРёС‚СЊ РЅР°Р·РІР°РЅРёРµ РєР°СЂС‚С‹ \n" << "2. РР·РјРµРЅРёС‚СЊ РІС‹СЃРѕС‚Сѓ РєР°СЂС‚С‹ \n"
+			<< "3. РР·РјРµРЅРёС‚СЊ С€РёСЂРёРЅСѓ РєР°СЂС‚С‹ \n" << "4. РР·РјРµРЅРёС‚СЊ РіРµРЅРµСЂР°С‚РѕСЂ Р·Р°РґРЅРµРіРѕ С„РѕРЅР° Рё СЃРіРµРЅРµСЂРёСЂРѕРІР°С‚СЊ РЅРѕРІС‹Р№ С„РѕРЅ \n" << "5. Р’РµСЂРЅСѓС‚СЊСЃСЏ РІ РїСЂРѕС€Р»РѕРµ РјРµРЅСЋ \n";
 		std::cin >> choice;
 		switch (choice)
 		{
 		case 1:
-			std::cout << "Введите название карты " << std::endl;
+			std::cout << "Р’РІРµРґРёС‚Рµ РЅР°Р·РІР°РЅРёРµ РєР°СЂС‚С‹ " << std::endl;
 			std::cin >> name;
 			current_map->name = name;
 			break;
 		case 2:
-			std::cout << "Введите высоту карты " << std::endl;
+			std::cout << "Р’РІРµРґРёС‚Рµ РІС‹СЃРѕС‚Сѓ РєР°СЂС‚С‹ " << std::endl;
 			std::cin >> height;
 			current_map->height = height;
 			break;
 		case 3:
-			std::cout << "Введите ширину карты " << std::endl;
+			std::cout << "Р’РІРµРґРёС‚Рµ С€РёСЂРёРЅСѓ РєР°СЂС‚С‹ " << std::endl;
 			std::cin >> width;
 			current_map->width = width;
 			break;
 		case 4:
-			//пока ничего не делает
+			//РїРѕРєР° РЅРёС‡РµРіРѕ РЅРµ РґРµР»Р°РµС‚
 			break;
 		case 5:
 			return;
@@ -376,8 +376,8 @@ void Tester::edit_map(Map* current_map)
 void Tester::work_with_map_env(Map* current_map)
 {
 	Environment* current_environment = current_map->get_env();
-	int npc_amount = 10; //можно где-нибудь спрашивать
-	if (current_environment == nullptr) //такие проверки в другие места вставлять
+	int npc_amount = 10; //РјРѕР¶РЅРѕ РіРґРµ-РЅРёР±СѓРґСЊ СЃРїСЂР°С€РёРІР°С‚СЊ
+	if (current_environment == nullptr) //С‚Р°РєРёРµ РїСЂРѕРІРµСЂРєРё РІ РґСЂСѓРіРёРµ РјРµСЃС‚Р° РІСЃС‚Р°РІР»СЏС‚СЊ
 	{
 		current_environment = new Environment(new NPC_pool(npc_amount));
 		current_map->env = current_environment;
@@ -389,8 +389,8 @@ void Tester::work_with_map_env(Map* current_map)
 	do
 	{
 		system("cls");
-		std::cout << "Выберите один из пунктов меню: \n" << "1. Добавить новый предмет окружения \n" << "2. Добавить стандартный предмет окружения (камень) \n" 
-			<< "3. Добавить нового НИП из пула в окружение \n" << "4. Вернуться в прошлое меню \n";
+		std::cout << "Р’С‹Р±РµСЂРёС‚Рµ РѕРґРёРЅ РёР· РїСѓРЅРєС‚РѕРІ РјРµРЅСЋ: \n" << "1. Р”РѕР±Р°РІРёС‚СЊ РЅРѕРІС‹Р№ РїСЂРµРґРјРµС‚ РѕРєСЂСѓР¶РµРЅРёСЏ \n" << "2. Р”РѕР±Р°РІРёС‚СЊ СЃС‚Р°РЅРґР°СЂС‚РЅС‹Р№ РїСЂРµРґРјРµС‚ РѕРєСЂСѓР¶РµРЅРёСЏ (РєР°РјРµРЅСЊ) \n" 
+			<< "3. Р”РѕР±Р°РІРёС‚СЊ РЅРѕРІРѕРіРѕ РќРРџ РёР· РїСѓР»Р° РІ РѕРєСЂСѓР¶РµРЅРёРµ \n" << "4. Р’РµСЂРЅСѓС‚СЊСЃСЏ РІ РїСЂРѕС€Р»РѕРµ РјРµРЅСЋ \n";
 		std::cin >> choice;
 		switch (choice)
 		{
@@ -401,14 +401,14 @@ void Tester::work_with_map_env(Map* current_map)
 			current_environment->add_env_object(env_obj);
 			break;
 		case 2:
-			env_obj = new Unique_state_env_obj("Камень", 100, rand() % 100, rand() % 100);
+			env_obj = new Unique_state_env_obj("РљР°РјРµРЅСЊ", 100, rand() % 100, rand() % 100);
 			if (env_obj->coordinates.first >= current_map->width) env_obj->coordinates.first = current_map->width - 1;
 			if (env_obj->coordinates.second >= current_map->height) env_obj->coordinates.second = current_map->height - 1;
 			current_environment->add_env_object(env_obj);
 			break;			
 		case 3:
-			current_environment->add_NPC(); //добавляет из пула
-			current_environment->assigned_NPCs[current_environment->assigned_NPCs.size() - 1]->x = rand() % 100; //ставим случайные координаты
+			current_environment->add_NPC(); //РґРѕР±Р°РІР»СЏРµС‚ РёР· РїСѓР»Р°
+			current_environment->assigned_NPCs[current_environment->assigned_NPCs.size() - 1]->x = rand() % 100; //СЃС‚Р°РІРёРј СЃР»СѓС‡Р°Р№РЅС‹Рµ РєРѕРѕСЂРґРёРЅР°С‚С‹
 			current_environment->assigned_NPCs[current_environment->assigned_NPCs.size() - 1]->y = rand() % 100;
 			break;
 		case 4:
@@ -430,32 +430,32 @@ Unique_state_env_obj* Tester::create_env_obj()
 	do
 	{
 		system("cls");
-		std::cout << "Выберите один из пунктов меню: \n" << "1. Ввести название объекта \n" << "2. Ввести координату x объекта \n"
-			<< "3. Ввести координату y объекта \n" << "4. Ввести здоровье объекта \n" << "5. Сохранить и вернуться в прошлое меню \n";
+		std::cout << "Р’С‹Р±РµСЂРёС‚Рµ РѕРґРёРЅ РёР· РїСѓРЅРєС‚РѕРІ РјРµРЅСЋ: \n" << "1. Р’РІРµСЃС‚Рё РЅР°Р·РІР°РЅРёРµ РѕР±СЉРµРєС‚Р° \n" << "2. Р’РІРµСЃС‚Рё РєРѕРѕСЂРґРёРЅР°С‚Сѓ x РѕР±СЉРµРєС‚Р° \n"
+			<< "3. Р’РІРµСЃС‚Рё РєРѕРѕСЂРґРёРЅР°С‚Сѓ y РѕР±СЉРµРєС‚Р° \n" << "4. Р’РІРµСЃС‚Рё Р·РґРѕСЂРѕРІСЊРµ РѕР±СЉРµРєС‚Р° \n" << "5. РЎРѕС…СЂР°РЅРёС‚СЊ Рё РІРµСЂРЅСѓС‚СЊСЃСЏ РІ РїСЂРѕС€Р»РѕРµ РјРµРЅСЋ \n";
 		std::cin >> choice;
 		switch (choice)
 		{
 		case 1:
-			std::cout << "Введите название объекта " << std::endl;
+			std::cout << "Р’РІРµРґРёС‚Рµ РЅР°Р·РІР°РЅРёРµ РѕР±СЉРµРєС‚Р° " << std::endl;
 			std::cin >> name;
 			break;
 		case 2:
-			std::cout << "Введите координату x объекта " << std::endl;
+			std::cout << "Р’РІРµРґРёС‚Рµ РєРѕРѕСЂРґРёРЅР°С‚Сѓ x РѕР±СЉРµРєС‚Р° " << std::endl;
 			std::cin >> x;
 			if (x < 0) x = 0;
 			break;
 		case 3:
-			std::cout << "Введите координату y объекта " << std::endl;
+			std::cout << "Р’РІРµРґРёС‚Рµ РєРѕРѕСЂРґРёРЅР°С‚Сѓ y РѕР±СЉРµРєС‚Р° " << std::endl;
 			std::cin >> y;
 			if (y < 0) y = 0;
 			break;
 		case 4:
-			std::cout << "Введите здоровье объекта " << std::endl;
+			std::cout << "Р’РІРµРґРёС‚Рµ Р·РґРѕСЂРѕРІСЊРµ РѕР±СЉРµРєС‚Р° " << std::endl;
 			std::cin >> health;
 			break;
 		case 5:
 			result = new Unique_state_env_obj(name, health, x, y);
-			result->set_behaviour("inactive"); //затычка
+			result->set_behaviour("inactive"); //Р·Р°С‚С‹С‡РєР°
 			return result;
 		default:
 			break;
@@ -467,7 +467,7 @@ void Tester::choose_class(Player* current_player)
 {
 	bool isMagical =  false;
 	char choice;
-	std::cout << "Вы хотите создать рукопашного персонажа? y/n: \n";
+	std::cout << "Р’С‹ С…РѕС‚РёС‚Рµ СЃРѕР·РґР°С‚СЊ СЂСѓРєРѕРїР°С€РЅРѕРіРѕ РїРµСЂСЃРѕРЅР°Р¶Р°? y/n: \n";
 	std::cin >> choice;
 	if (choice == 'y')
 	{
@@ -477,7 +477,7 @@ void Tester::choose_class(Player* current_player)
 	{
 		current_player->factory = new Ranged_factory();
 	}
-	std::cout << "Вы хотите создать магического персонажа? y/n: \n";
+	std::cout << "Р’С‹ С…РѕС‚РёС‚Рµ СЃРѕР·РґР°С‚СЊ РјР°РіРёС‡РµСЃРєРѕРіРѕ РїРµСЂСЃРѕРЅР°Р¶Р°? y/n: \n";
 	std::cin >> choice;
 	if (choice == 'y')
 		isMagical = true;
@@ -498,27 +498,27 @@ void Tester::add_abilities(Player* current_player)
 	do
 	{
 		system("cls");
-		std::cout << "Выберите один из пунктов меню: \n" << "1. Добавить новую способность, наносящую урон \n" << "2. Добавить новую исцеляющую способность \n"
-			<< "3. Добавить новую способность, накладывающую статусный эффект \n" << "4. Вернуться в прошлое меню \n";
+		std::cout << "Р’С‹Р±РµСЂРёС‚Рµ РѕРґРёРЅ РёР· РїСѓРЅРєС‚РѕРІ РјРµРЅСЋ: \n" << "1. Р”РѕР±Р°РІРёС‚СЊ РЅРѕРІСѓСЋ СЃРїРѕСЃРѕР±РЅРѕСЃС‚СЊ, РЅР°РЅРѕСЃСЏС‰СѓСЋ СѓСЂРѕРЅ \n" << "2. Р”РѕР±Р°РІРёС‚СЊ РЅРѕРІСѓСЋ РёСЃС†РµР»СЏСЋС‰СѓСЋ СЃРїРѕСЃРѕР±РЅРѕСЃС‚СЊ \n"
+			<< "3. Р”РѕР±Р°РІРёС‚СЊ РЅРѕРІСѓСЋ СЃРїРѕСЃРѕР±РЅРѕСЃС‚СЊ, РЅР°РєР»Р°РґС‹РІР°СЋС‰СѓСЋ СЃС‚Р°С‚СѓСЃРЅС‹Р№ СЌС„С„РµРєС‚ \n" << "4. Р’РµСЂРЅСѓС‚СЊСЃСЏ РІ РїСЂРѕС€Р»РѕРµ РјРµРЅСЋ \n";
 		std::cin >> choice;
 		switch (choice)
 		{
 		case 1:
-			std::cout << "Введите количество урона, наносимого способностью ";
+			std::cout << "Р’РІРµРґРёС‚Рµ РєРѕР»РёС‡РµСЃС‚РІРѕ СѓСЂРѕРЅР°, РЅР°РЅРѕСЃРёРјРѕРіРѕ СЃРїРѕСЃРѕР±РЅРѕСЃС‚СЊСЋ ";
 			std::cin >> damage;
 			creator = new Damage_ability_creator(damage);
 			current_player->game_class->add_ability(creator->create_ability(range, "damage " + std::to_string(damage)));
 			break;
 		case 2:
-			std::cout << "Введите количество здоровья, восстанавливаемого способностью ";
+			std::cout << "Р’РІРµРґРёС‚Рµ РєРѕР»РёС‡РµСЃС‚РІРѕ Р·РґРѕСЂРѕРІСЊСЏ, РІРѕСЃСЃС‚Р°РЅР°РІР»РёРІР°РµРјРѕРіРѕ СЃРїРѕСЃРѕР±РЅРѕСЃС‚СЊСЋ ";
 			std::cin >> healing;
 			creator = new Healing_ability_creator(healing);
 			current_player->game_class->add_ability(creator->create_ability(range, "healing " + std::to_string(healing)));
 			break;
 		case 3:
-			std::cout << "Введите название статусного эффекта, накладываемого способностью ";
+			std::cout << "Р’РІРµРґРёС‚Рµ РЅР°Р·РІР°РЅРёРµ СЃС‚Р°С‚СѓСЃРЅРѕРіРѕ СЌС„С„РµРєС‚Р°, РЅР°РєР»Р°РґС‹РІР°РµРјРѕРіРѕ СЃРїРѕСЃРѕР±РЅРѕСЃС‚СЊСЋ ";
 			std::cin >> status_name;
-			std::cout << "Введите длительность статусного эффекта, накладываемого способностью ";
+			std::cout << "Р’РІРµРґРёС‚Рµ РґР»РёС‚РµР»СЊРЅРѕСЃС‚СЊ СЃС‚Р°С‚СѓСЃРЅРѕРіРѕ СЌС„С„РµРєС‚Р°, РЅР°РєР»Р°РґС‹РІР°РµРјРѕРіРѕ СЃРїРѕСЃРѕР±РЅРѕСЃС‚СЊСЋ ";
 			std::cin >> status_duration;
 			creator = new Status_ability_creator(status_name, status_duration);
 			current_player->game_class->add_ability(creator->create_ability(range, "status " + status_name));

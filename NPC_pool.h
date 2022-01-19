@@ -5,7 +5,7 @@ class NPC_pool
 {
 private:
 	std::vector<NPC*> NPC_list;
-	std::vector<bool> is_free; //свободен ли определённый NPC
+	std::vector<bool> is_free; //СЃРІРѕР±РѕРґРµРЅ Р»Рё РѕРїСЂРµРґРµР»С‘РЅРЅС‹Р№ NPC
 public:
 	NPC_pool(int);
 	NPC* get_NPC();

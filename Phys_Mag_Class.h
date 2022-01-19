@@ -5,13 +5,13 @@
 class Physical : public Class
 {
 public:
-	const std::string preferred_damage_type = "физический";
+	const std::string preferred_damage_type = "С„РёР·РёС‡РµСЃРєРёР№";
 	Physical();
 };
 
 class Magical : public Class
 {
 public:
-	const std::string preferred_damage_type = "магический";
+	const std::string preferred_damage_type = "РјР°РіРёС‡РµСЃРєРёР№";
 	Magical();
 };

@@ -5,7 +5,7 @@
 class Environmental_object
 {
 protected:
-	std::string sprite; //название файла со спрайтом
+	std::string sprite; //РЅР°Р·РІР°РЅРёРµ С„Р°Р№Р»Р° СЃРѕ СЃРїСЂР°Р№С‚РѕРј
 public:
 	Environmental_object();
 	Environmental_object(std::string);

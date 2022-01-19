@@ -25,13 +25,13 @@
 class Tester
 {
 public:
-	void play(); //"потестировать" "игру"
+	void play(); //"РїРѕС‚РµСЃС‚РёСЂРѕРІР°С‚СЊ" "РёРіСЂСѓ"
 	void move_player(Player*);
 	void choose_target(Class_ability*);
 	void choose_ability();
 	void use_object();
-	void main_menu(); //начало "создания игры", "главное меню"
-	void work_with_player(); //работа с персонажем игрока
+	void main_menu(); //РЅР°С‡Р°Р»Рѕ "СЃРѕР·РґР°РЅРёСЏ РёРіСЂС‹", "РіР»Р°РІРЅРѕРµ РјРµРЅСЋ"
+	void work_with_player(); //СЂР°Р±РѕС‚Р° СЃ РїРµСЂСЃРѕРЅР°Р¶РµРј РёРіСЂРѕРєР°
 	Player* create_player();
 	void edit_player(Player*);
 	void work_with_map();

@@ -2,7 +2,7 @@
 #include <vector>
 #include "Class_ability.h"
 #include "Subscriber.h"
-#include "Scaling_visitor.h" //плохо
+#include "Scaling_visitor.h" //РїР»РѕС…Рѕ
 
 class Character;
 

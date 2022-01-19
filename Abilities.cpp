@@ -15,7 +15,7 @@ void Damage_ability::accept_visitor(Ability_visitor* visitor)
 void Damage_ability::cast(Character* target)
 {
 	target->set_health(target->get_health() - damage_formula);
-	std::cout << "Íàçâàíèå ñïîñîáíîñòè " << this->get_description() << std::endl << "Óðîí íàíåñ¸í: " << damage_formula << std::endl;
+	std::cout << "ÐÐ°Ð·Ð²Ð°Ð½Ð¸Ðµ ÑÐ¿Ð¾ÑÐ¾Ð±Ð½Ð¾ÑÑ‚Ð¸ " << this->get_description() << std::endl << "Ð£Ñ€Ð¾Ð½ Ð½Ð°Ð½ÐµÑÑ‘Ð½: " << damage_formula << std::endl;
 }
 
 Healing_ability::Healing_ability(int healing, float range, std::string description) : Class_ability(range, description)
@@ -31,7 +31,7 @@ void Healing_ability::accept_visitor(Ability_visitor* visitor)
 void Healing_ability::cast(Character* target)
 {
 	target->set_health(target->get_health() + healing_formula);
-	std::cout << "Íàçâàíèå ñïîñîáíîñòè " << this->get_description() << std::endl << "Ëå÷åíèå ïðèìåíåíî" << std::endl;
+	std::cout << "ÐÐ°Ð·Ð²Ð°Ð½Ð¸Ðµ ÑÐ¿Ð¾ÑÐ¾Ð±Ð½Ð¾ÑÑ‚Ð¸ " << this->get_description() << std::endl << "Ð›ÐµÑ‡ÐµÐ½Ð¸Ðµ Ð¿Ñ€Ð¸Ð¼ÐµÐ½ÐµÐ½Ð¾" << std::endl;
 }
 
 Status_ability::Status_ability(std::string status_name, int duration, float range, std::string description) : Class_ability(range, description)
@@ -47,6 +47,6 @@ void Status_ability::accept_visitor(Ability_visitor* visitor)
 
 void Status_ability::cast(Character* target)
 {
-	std::cout << "Íàçâàíèå ñïîñîáíîñòè " << this->get_description() << std::endl;
-	std::cout << "Ñòàòóñíûé ýôôåêò " << applied_status << " ïðèìåí¸í ê öåëè " << target->get_name() << ", äëèòåëüíîñòü ýôôåêòà " << status_duration << std::endl;
+	std::cout << "ÐÐ°Ð·Ð²Ð°Ð½Ð¸Ðµ ÑÐ¿Ð¾ÑÐ¾Ð±Ð½Ð¾ÑÑ‚Ð¸ " << this->get_description() << std::endl;
+	std::cout << "Ð¡Ñ‚Ð°Ñ‚ÑƒÑÐ½Ñ‹Ð¹ ÑÑ„Ñ„ÐµÐºÑ‚ " << applied_status << " Ð¿Ñ€Ð¸Ð¼ÐµÐ½Ñ‘Ð½ Ðº Ñ†ÐµÐ»Ð¸ " << target->get_name() << ", Ð´Ð»Ð¸Ñ‚ÐµÐ»ÑŒÐ½Ð¾ÑÑ‚ÑŒ ÑÑ„Ñ„ÐµÐºÑ‚Ð° " << status_duration << std::endl;
 }

@@ -1,6 +1,6 @@
 #include "Perlin_noise.h"
 
-std::string Perlin_noise::generate_background() //TODO: будем возвращать название файла, в котором нагенерировалась картинка
+std::string Perlin_noise::generate_background() //TODO: Р±СѓРґРµРј РІРѕР·РІСЂР°С‰Р°С‚СЊ РЅР°Р·РІР°РЅРёРµ С„Р°Р№Р»Р°, РІ РєРѕС‚РѕСЂРѕРј РЅР°РіРµРЅРµСЂРёСЂРѕРІР°Р»Р°СЃСЊ РєР°СЂС‚РёРЅРєР°
 {
 	return "Perlin.png";
 }

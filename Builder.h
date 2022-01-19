@@ -1,5 +1,5 @@
 #pragma once
-class Builder //в итоге не нужен
+class Builder
 {
 public:
 	virtual void build();

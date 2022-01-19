@@ -1,6 +1,6 @@
 #include "Voronoi_diagramm.h"
 
-std::string Voronoi_diagramm::generate_background() //TODO: будем возвращать название файла, в котором нагенерировалась картинка
+std::string Voronoi_diagramm::generate_background() //TODO: Р±СѓРґРµРј РІРѕР·РІСЂР°С‰Р°С‚СЊ РЅР°Р·РІР°РЅРёРµ С„Р°Р№Р»Р°, РІ РєРѕС‚РѕСЂРѕРј РЅР°РіРµРЅРµСЂРёСЂРѕРІР°Р»Р°СЃСЊ РєР°СЂС‚РёРЅРєР°
 {
 	return "Voronoi.png";
 }

@@ -2,14 +2,14 @@
 
 void Physical_Melee::use_ability(Character* target, int i)
 {
-	//проверять дальность использования способностей надо будет в самом персонаже.
+	//РїСЂРѕРІРµСЂВ¤С‚СЊ РґР°Р»СЊРЅРѕСЃС‚СЊ РёСЃРїРѕР»СЊР·РѕРІР°РЅРёВ¤ СЃРїРѕСЃРѕР±РЅРѕСЃС‚РµР№ РЅР°РґРѕ Р±СѓРґРµС‚ РІ СЃР°РјРѕРј РїРµСЂСЃРѕРЅР°Р¶Рµ.
 	list_of_abilities[i]->cast(target);
 }
 
 Physical_Melee::Physical_Melee()
 {
 	preferred_range = 10;
-	desc = "Физический рукопашный класс";
+	desc = "вЂРёР·РёС‡РµСЃРєРёР№ СЂСѓРєРѕРїР°С€РЅС‹Р№ РєР»Р°СЃСЃ";
 }
 
 void Physical_Ranged::use_ability(Character* target, int i)
@@ -20,7 +20,7 @@ void Physical_Ranged::use_ability(Character* target, int i)
 Physical_Ranged::Physical_Ranged()
 {
 	preferred_range = 35;
-	desc = "Физический дальнобойный класс";
+	desc = "вЂРёР·РёС‡РµСЃРєРёР№ РґР°Р»СЊРЅРѕР±РѕР№РЅС‹Р№ РєР»Р°СЃСЃ";
 }
 
 void Magical_Melee::use_ability(Character* target, int i)
@@ -31,7 +31,7 @@ void Magical_Melee::use_ability(Character* target, int i)
 Magical_Melee::Magical_Melee()
 {
 	preferred_range = 10;
-	desc = "Магический рукопашный класс";
+	desc = "С›Р°РіРёС‡РµСЃРєРёР№ СЂСѓРєРѕРїР°С€РЅС‹Р№ РєР»Р°СЃСЃ";
 }
 
 void Magical_Ranged::use_ability(Character* target, int i)
@@ -43,5 +43,5 @@ void Magical_Ranged::use_ability(Character* target, int i)
 Magical_Ranged::Magical_Ranged()
 {
 	preferred_range = 35;
-	desc = "Магический дальнобойный класс";
+	desc = "С›Р°РіРёС‡РµСЃРєРёР№ РґР°Р»СЊРЅРѕР±РѕР№РЅС‹Р№ РєР»Р°СЃСЃ";
 }

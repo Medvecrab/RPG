@@ -6,7 +6,7 @@ class Player_builder
 private:
 	Player* result;
 public:
-	//TODO: сделать все-все поля персонажу, и для них тут сделать build-функции
+	//TODO: СЃРґРµР»Р°С‚СЊ РІСЃРµ-РІСЃРµ РїРѕР»СЏ РїРµСЂСЃРѕРЅР°Р¶Сѓ, Рё РґР»СЏ РЅРёС… С‚СѓС‚ СЃРґРµР»Р°С‚СЊ build-С„СѓРЅРєС†РёРё
 	Player_builder();
 	void build_health(int);
 	void build_resource(int);

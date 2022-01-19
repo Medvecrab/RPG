@@ -11,7 +11,7 @@ Class::Class(std::string base_desc)
 
 void Class::add_ability(Class_ability* abil)
 {
-	//Class_ability* abil = new Class_ability(); //тут надо подумать как сделать добавление нормальных абилок
+	//Class_ability* abil = new Class_ability(); //С‚СѓС‚ РЅР°РґРѕ РїРѕРґСѓРјР°С‚СЊ РєР°Рє СЃРґРµР»Р°С‚СЊ РґРѕР±Р°РІР»РµРЅРёРµ РЅРѕСЂРјР°Р»СЊРЅС‹С… Р°Р±РёР»РѕРє
 	this->list_of_abilities.push_back(abil);
 }
 
@@ -27,7 +27,7 @@ void Class::use_ability(Character* target, int n)
 
 void Class::scale_abilities()
 {
-	Ability_visitor* visitor = new Scaling_visitor(1.5, 1); //вот эти константы "плохие", но их можно и нужно переделать
+	Ability_visitor* visitor = new Scaling_visitor(1.5, 1); //РІРѕС‚ СЌС‚Рё РєРѕРЅСЃС‚Р°РЅС‚С‹ "РїР»РѕС…РёРµ", РЅРѕ РёС… РјРѕР¶РЅРѕ Рё РЅСѓР¶РЅРѕ РїРµСЂРµРґРµР»Р°С‚СЊ
 	for (auto abil : list_of_abilities)
 	{
 		abil->accept_visitor(visitor);

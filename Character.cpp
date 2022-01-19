@@ -59,7 +59,7 @@ void Character::spawn(int x, int y)
 	std::cout << "Spawned at x = " << x << " , y = " << y << std::endl;
 }
 
-void Character::set_class(bool isMagical) //ìîæíî ïåðåäàâàòü êëàññ è äàëüíîñòü ñðàçó, êîñòûëü äëÿ builder
+void Character::set_class(bool isMagical) //Ð¼Ð¾Ð¶Ð½Ð¾ Ð¿ÐµÑ€ÐµÐ´Ð°Ð²Ð°Ñ‚ÑŒ ÐºÐ»Ð°ÑÑ Ð¸ Ð´Ð°Ð»ÑŒÐ½Ð¾ÑÑ‚ÑŒ ÑÑ€Ð°Ð·Ñƒ, ÐºÐ¾ÑÑ‚Ñ‹Ð»ÑŒ Ð´Ð»Ñ builder
 {
 	if (isMagical)
 		game_class = factory->create_magical();

@@ -7,7 +7,7 @@ void Environment::add_NPC()
 
 void Environment::spawn_NPCs()
 {
-	//TODO: спавнить неписей используя итератор
+	//TODO: СЃРїР°РІРЅРёС‚СЊ РЅРµРїРёСЃРµР№ РёСЃРїРѕР»СЊР·СѓВ¤ РёС‚РµСЂР°С‚РѕСЂ
 }
 
 void Environment::add_env_object(Unique_state_env_obj* env_obj)

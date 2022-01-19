@@ -23,12 +23,12 @@ void Map_history::get_history()
 {
 	for (auto snap : snapshot_history)
 	{
-		std::cout << "Äàòà ñíèìêà " << snap->get_snapshot_date() << std::endl;
-		std::cout << "Èìÿ êàðòû " << snap->get_name() << std::endl;
-		std::cout << "Âûñîòà êàðòû " << snap->get_height() << std::endl;
-		std::cout << "Øèðèíà êàðòû " << snap->get_width() << std::endl;
-		std::cout << "Íàçâàíèå èçîáðàæåíèÿ çàäíåãî ôîíà " << snap->get_bg_image() << std::endl;
-		//TODO:êàê-íèáóäü âûâîäèòü èíôîðìàöèþ îá îñòàíîâêå è ãåíåðàòîðå çàäíåãî ôîíà? íî î ãåíåðàòîðå äàæå èíôîðìàöèè íåò
+		std::cout << "Ð”Ð°Ñ‚Ð° ÑÐ½Ð¸Ð¼ÐºÐ° " << snap->get_snapshot_date() << std::endl;
+		std::cout << "Ð˜Ð¼Ñ ÐºÐ°Ñ€Ñ‚Ñ‹ " << snap->get_name() << std::endl;
+		std::cout << "Ð’Ñ‹ÑÐ¾Ñ‚Ð° ÐºÐ°Ñ€Ñ‚Ñ‹ " << snap->get_height() << std::endl;
+		std::cout << "Ð¨Ð¸Ñ€Ð¸Ð½Ð° ÐºÐ°Ñ€Ñ‚Ñ‹ " << snap->get_width() << std::endl;
+		std::cout << "ÐÐ°Ð·Ð²Ð°Ð½Ð¸Ðµ Ð¸Ð·Ð¾Ð±Ñ€Ð°Ð¶ÐµÐ½Ð¸Ñ Ð·Ð°Ð´Ð½ÐµÐ³Ð¾ Ñ„Ð¾Ð½Ð° " << snap->get_bg_image() << std::endl;
+		//TODO:ÐºÐ°Ðº-Ð½Ð¸Ð±ÑƒÐ´ÑŒ Ð²Ñ‹Ð²Ð¾Ð´Ð¸Ñ‚ÑŒ Ð¸Ð½Ñ„Ð¾Ñ€Ð¼Ð°Ñ†Ð¸ÑŽ Ð¾Ð± Ð¾ÑÑ‚Ð°Ð½Ð¾Ð²ÐºÐµ Ð¸ Ð³ÐµÐ½ÐµÑ€Ð°Ñ‚Ð¾Ñ€Ðµ Ð·Ð°Ð´Ð½ÐµÐ³Ð¾ Ñ„Ð¾Ð½Ð°? Ð½Ð¾ Ð¾ Ð³ÐµÐ½ÐµÑ€Ð°Ñ‚Ð¾Ñ€Ðµ Ð´Ð°Ð¶Ðµ Ð¸Ð½Ñ„Ð¾Ñ€Ð¼Ð°Ñ†Ð¸Ð¸ Ð½ÐµÑ‚
 	}
 }
 
